@@ -22,4 +22,8 @@
     return nil;
 }
 
+- (NSComparisonResult)compareByDate:(Event *)otherObject {
+    return [self.date compare:otherObject.date];
+}
+
 @end

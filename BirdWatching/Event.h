@@ -18,6 +18,6 @@
 @property (nonatomic, copy) NSString *description;
 
 -(id)initWithHouse:(House *)house andName:(NSString *)name andDate:(NSDate *)date andDescription:(NSString *)description;
-
+-(NSComparisonResult)compareByDate:(Event *)otherObject;
 
 @end

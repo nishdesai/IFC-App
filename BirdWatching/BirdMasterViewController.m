@@ -95,7 +95,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"E, dd/MM"];
     
-    if ([self.dataController objectInEventsAtIndex:total].date == nil || [self.dataController objectInEventsAtIndex:total].date == [NSDate date]) {
+    if ([self.dataController objectInEventsAtIndex:total].date == nil || [[self.dataController objectInEventsAtIndex:total].date isEqual:[NSDate date]]) {
         return @"Today";
     }
     return [formatter stringFromDate:[self.dataController objectInEventsAtIndex:total].date];

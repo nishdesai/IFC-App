@@ -66,10 +66,10 @@
 
 // UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
     
-//    NSDate *prevDate;
-//    int numOfEvents = 0;
-//    for (int i = 0; i < [self.events count]; i++) {
-//        if (prevDate == nil || ((Event *)[self.events objectAtIndex:i]).date == prevDate) {
+//   NSDate *prevDate;
+//   int numOfEvents = 0;
+//   for (int i = 0; i < [self.events count]; i++) {
+//       if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
 //            numOfEvents++;
 //        } else {
 //            [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
@@ -79,8 +79,9 @@
 //    }
 //    [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
     
-    
+    self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
 }
+
 
 -(void)reloadLists {
     [self initializeDefaultDataLists];
