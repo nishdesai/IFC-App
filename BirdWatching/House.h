@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSMutableArray *events;
 @property (nonatomic) BOOL isFavorite;
+@property (nonatomic, copy) NSString *greek;
 
 -(id)initWithName:(NSString *)name andBio:(NSString *)bio andAddress:(NSString *)address;
 

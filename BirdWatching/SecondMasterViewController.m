@@ -90,6 +90,9 @@
     
     House *houseAtIndex = [self.dataController objectInHousesAtIndex:indexPath.row];
     [[cell textLabel] setText:houseAtIndex.name];
+    if (houseAtIndex.greek != nil) {
+        [[cell detailTextLabel] setText:houseAtIndex.greek];
+    }
     return cell;
 }
 
