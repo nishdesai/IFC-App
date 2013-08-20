@@ -23,23 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(saveHouseData:)
-//                                                 name:UIApplicationWillTerminateNotification
-//                                               object:nil];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = nil;
 //    
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
-//- (void)saveHouseData:(NSNotification *)notification {    
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    [defaults setObject:self.dataController.houses forKey:@"houseArray"];
-//    [defaults synchronize];
-//   
-//    
-//}
 
 
 - (void)didReceiveMemoryWarning
@@ -112,6 +101,7 @@
      House *house = [self.dataController.houses objectAtIndex:fromIndexPath.row];
      [self.dataController.houses removeObjectAtIndex:fromIndexPath.row];
      [self.dataController.houses insertObject:house atIndex:toIndexPath.row];
+     
      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
      NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.dataController.houses];
      [defaults setObject:data forKey:@"houseArray"];
