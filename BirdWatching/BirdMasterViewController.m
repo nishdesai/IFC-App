@@ -41,7 +41,7 @@
 //    self.navigationItem.leftBarButtonItem = nil;
 //
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = nil;
+//    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)checkForRefresh:(NSNotification *)notification {
@@ -111,8 +111,7 @@
     
     Event *eventAtIndex = [self.dataController objectInEventsAtIndex:indexPath.row];
     [[cell textLabel] setText:eventAtIndex.eventName];
-    [cell detailTextLabel].numberOfLines = 0;
-    [[cell detailTextLabel] setText:[eventAtIndex.house.name stringByAppendingString:@" @ 6:00"]];
+    [[cell detailTextLabel] setText:[eventAtIndex.houseName stringByAppendingString:@" @ 6:00"]];
     return cell;
     
 }

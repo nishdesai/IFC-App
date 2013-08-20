@@ -16,8 +16,12 @@
 @property (nonatomic, copy) NSString *eventName;
 @property (nonatomic, copy) NSDate *date;
 @property (nonatomic, copy) NSString *description;
+@property (nonatomic, copy) NSString *houseName;
 
 -(id)initWithHouse:(House *)house andName:(NSString *)name andDate:(NSDate *)date andDescription:(NSString *)description;
 -(NSComparisonResult)compareByDate:(Event *)otherObject;
+
+- (void)encodeWithCoder:(NSCoder *)coder;
+- (id)initWithCoder:(NSCoder *)coder;
 
 @end

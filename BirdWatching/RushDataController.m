@@ -16,24 +16,22 @@
 
 
 -(void)initializeDefaultDataLists {
+        
     NSMutableArray *houseList = [[NSMutableArray alloc] init];
     NSMutableArray *eventList = [[NSMutableArray alloc] init];
     self.events = eventList;
     
-    NSString *plistPath;
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                              NSUserDomainMask, YES) objectAtIndex:0];
-    plistPath = [rootPath stringByAppendingPathComponent:@"HouseList.plist"];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-        plistPath = [[NSBundle mainBundle] pathForResource:@"HouseList" ofType:@"plist"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    NSData *temp = [defaults objectForKey:@"houseArray"];
+    NSMutableArray *houseArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:temp];
+    if (temp == nil) {
+        NSLog(@"temp is nil");
+    } else {
+        NSLog([NSString stringWithFormat:@"%d", [houseArray count]]);
+        self.houses = houseArray;
     }
-    
-    NSMutableArray *temp = [NSMutableArray arrayWithContentsOfFile:plistPath];
-    if (temp) {
-        self.houses = temp;
-    }
-    
-    
+
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ucb-ifc.herokuapp.com/home.json"]]
                                                          options:NSJSONReadingMutableContainers
                                                            error:nil];

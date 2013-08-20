@@ -8,7 +8,7 @@
 
 #import "House.h"
 
-@implementation House
+@implementation House : NSObject
 
 
 -(id)initWithName:(NSString *)name andBio:(NSString *)bio andAddress:(NSString *)address {
@@ -28,7 +28,6 @@
         _bio = bio;
         _address = address;
         _events = nil;
-        _isFavorite = NO;
         
         NSMutableArray *splitName = (NSMutableArray *)[name componentsSeparatedByString:@" "];
         NSMutableArray *greekNameArray = [[NSMutableArray alloc] init];
@@ -41,6 +40,29 @@
         return self;
     }
     return nil;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder;
+{
+    [coder encodeObject:self.name forKey:@"name"];
+    [coder encodeObject:self.address forKey:@"address"];
+    [coder encodeObject:self.bio forKey:@"bio"];
+    [coder encodeObject:self.greek forKey:@"greek"];
+    [coder encodeObject:self.events forKey:@"events"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder;
+{
+    self = [[House alloc] init];
+    if (self != nil)
+    {
+        self.name = [coder decodeObjectForKey:@"name"];
+        self.address = [coder decodeObjectForKey:@"address"];
+        self.bio = [coder decodeObjectForKey:@"bio"];
+        self. greek = [coder decodeObjectForKey:@"greek"];
+        self.events = [coder decodeObjectForKey:@"events"];
+    }
+    return self;
 }
 
 @end
