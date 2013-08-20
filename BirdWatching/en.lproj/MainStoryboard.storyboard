@@ -102,7 +102,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="183" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-KN-66r">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="183" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-KN-66r">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="Eic-H1-RgL"/>
                                     <constraint firstAttribute="width" constant="183" id="lXT-KI-xts"/>
@@ -139,19 +139,26 @@
                                     <segue destination="JDb-gU-zMS" kind="push" identifier="HouseEventsSegue" id="rrG-TQ-XQm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Greek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-Ag-zYL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P3g-KN-66r" firstAttribute="top" secondItem="22" secondAttribute="top" constant="82" id="0pl-eu-djM"/>
-                            <constraint firstAttribute="bottom" secondItem="GKg-pb-Ytx" secondAttribute="bottom" constant="54" id="4qp-0Y-6ls"/>
-                            <constraint firstItem="LQh-vh-tof" firstAttribute="centerX" secondItem="WoG-SY-v7d" secondAttribute="centerX" type="default" id="D7M-Vg-rN1"/>
-                            <constraint firstItem="GKg-pb-Ytx" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="MGp-db-9nE"/>
-                            <constraint firstItem="WoG-SY-v7d" firstAttribute="top" secondItem="22" secondAttribute="top" constant="34" id="Ud3-yn-f0J"/>
-                            <constraint firstAttribute="bottom" secondItem="UNS-mE-YEO" secondAttribute="bottom" constant="140" id="UjT-bB-sJw"/>
+                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="3eB-1L-Aie"/>
+                            <constraint firstItem="P3g-KN-66r" firstAttribute="centerX" secondItem="LQh-vh-tof" secondAttribute="centerX" type="default" id="5rL-oO-dXb"/>
+                            <constraint firstItem="LQh-vh-tof" firstAttribute="centerX" secondItem="UNS-mE-YEO" secondAttribute="centerX" type="default" id="HTU-Qm-AOP"/>
+                            <constraint firstItem="WoG-SY-v7d" firstAttribute="top" secondItem="22" secondAttribute="top" constant="35" id="IVt-1t-wff"/>
+                            <constraint firstItem="GKg-pb-Ytx" firstAttribute="top" secondItem="UNS-mE-YEO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YNj-Qg-988"/>
+                            <constraint firstAttribute="bottom" secondItem="GKg-pb-Ytx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ZEQ-Gu-Wc1"/>
                             <constraint firstItem="GKg-pb-Ytx" firstAttribute="centerX" secondItem="UNS-mE-YEO" secondAttribute="centerX" type="default" id="e2A-9e-gsW"/>
-                            <constraint firstItem="LQh-vh-tof" firstAttribute="top" secondItem="22" secondAttribute="top" constant="204" id="fGv-Ch-R4r"/>
-                            <constraint firstItem="P3g-KN-66r" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="63" id="rYC-XF-S9C"/>
-                            <constraint firstItem="P3g-KN-66r" firstAttribute="centerX" secondItem="LQh-vh-tof" secondAttribute="centerX" type="default" id="xU9-kE-8O6"/>
+                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="P3g-KN-66r" secondAttribute="centerX" type="default" id="hfD-iW-jhF"/>
+                            <constraint firstItem="UNS-mE-YEO" firstAttribute="top" secondItem="LQh-vh-tof" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hmd-IS-kni"/>
+                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="top" secondItem="22" secondAttribute="top" constant="81" id="icV-aW-Uuo"/>
+                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="WoG-SY-v7d" secondAttribute="centerX" type="default" id="jeA-Rp-z2h"/>
+                            <constraint firstItem="P3g-KN-66r" firstAttribute="top" secondItem="22" secondAttribute="top" constant="131" id="zKc-ne-nVi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="House Info" id="26"/>
@@ -159,6 +166,7 @@
                         <outlet property="favoriteButton" destination="UNS-mE-YEO" id="rzK-X3-KYy"/>
                         <outlet property="houseAddressLabel" destination="LQh-vh-tof" id="lBU-t0-un5"/>
                         <outlet property="houseBioLabel" destination="P3g-KN-66r" id="QUu-In-mwS"/>
+                        <outlet property="houseGreekLabel" destination="6n6-Ag-zYL" id="XNJ-vD-RWd"/>
                         <outlet property="houseNameLabel" destination="WoG-SY-v7d" id="K5v-aO-zaJ"/>
                     </connections>
                 </viewController>
@@ -386,41 +394,12 @@
             <point key="canvasLocation" x="1870" y="55"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BirdDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="eventDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventHouseButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="eventNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BirdMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdMasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SecondDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="favoriteButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="houseAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="houseBioLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="houseNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SecondMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondMasterViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="lXH-mJ-sbE"/>
+        <segue reference="KBd-60-8Sz"/>
     </inferredMetricsTieBreakers>
 </document>

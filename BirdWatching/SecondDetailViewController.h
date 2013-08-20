@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *houseNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseBioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseAddressLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *houseGreekLabel;
+@property (weak, nonatomic) IBOutlet UILabel *houseGreekLabel;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 

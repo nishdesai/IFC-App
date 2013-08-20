@@ -30,22 +30,31 @@
 {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkForRefresh:)
-                                                 name:UIApplicationDidBecomeActiveNotification
+                                             selector:@selector(saveHouseData:)
+                                                 name:UIApplicationWillTerminateNotification
                                                object:nil];
-//	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = nil;
 //    
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = nil;
+//    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = editButton;
 }
 
-- (void)checkForRefresh:(NSNotification *)notification {
-    NSLog(@"Message Received");
-    if ([self.lastRefresh timeIntervalSinceNow] <= -43200) {
-        [self.dataController reloadLists];
-        self.lastRefresh = [NSDate date];
+- (void)saveHouseData:(NSNotification *)notification {
+    NSString *plistPath;
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                              NSUserDomainMask, YES) objectAtIndex:0];
+    plistPath = [rootPath stringByAppendingPathComponent:@"HouseList.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"HouseList" ofType:@"plist"];
     }
+    
+    NSData *data = [NSPropertyListSerialization dataWithPropertyList:self.dataController.houses
+                                                              format:NSPropertyListXMLFormat_v1_0
+                                                             options:0
+                                                               error:nil];
+    [data writeToFile:plistPath atomically:NO];
+    
 }
 
 

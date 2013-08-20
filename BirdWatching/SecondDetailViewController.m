@@ -42,6 +42,7 @@
         self.houseNameLabel.text = h.name;
         self.houseBioLabel.text = h.bio;
         self.houseAddressLabel.text = h.address;
+        self.houseGreekLabel.text = h.greek;
     }
 }
 
