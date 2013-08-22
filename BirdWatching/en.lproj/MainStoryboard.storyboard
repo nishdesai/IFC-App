@@ -359,11 +359,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="kl8-v3-uWV"/>
+                    <navigationItem key="navigationItem" title="Map" id="kl8-v3-uWV">
+                        <barButtonItem key="rightBarButtonItem" title="Street View" id="Y4T-Kc-ZJj">
+                            <connections>
+                                <segue destination="38Z-JU-aWc" kind="push" id="bC2-j9-Lls"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGN-IV-YnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="729"/>
+            <point key="canvasLocation" x="1217" y="753"/>
+        </scene>
+        <!--Street View Controller - Street-->
+        <scene sceneID="mfW-h6-ppO">
+            <objects>
+                <viewController id="38Z-JU-aWc" customClass="StreetViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBQ-LJ-0xg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Street" id="fMt-XO-auZ">
+                        <barButtonItem key="rightBarButtonItem" id="OrM-7g-FGq"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aga-Vc-qYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621" y="747"/>
         </scene>
         <!--First Detail View Controller - Detail-->
         <scene sceneID="Lps-1p-cqW">
