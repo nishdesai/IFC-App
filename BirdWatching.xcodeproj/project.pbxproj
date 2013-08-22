@@ -61,8 +61,8 @@
 		198D82B317B0388F00535AFB /* RushDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushDataController.m; sourceTree = "<group>"; };
 		FD08CA0A17C5DBDA00BE5F23 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "../../../Downloads/icons_draft_01/App Icon [Squared]/Icon.png"; sourceTree = "<group>"; };
 		FD08CA0E17C5DCAA00BE5F23 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../Downloads/icons_draft_01/App Icon [Squared]/Icon@2x.png"; sourceTree = "<group>"; };
-		FD08CA1217C5E1B300BE5F23 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		FD08CA1217C5E1B300BE5F23 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +82,6 @@
 		198D827417B0116B00535AFB = {
 			isa = PBXGroup;
 			children = (
-				FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */,
-				FD08CA1217C5E1B300BE5F23 /* Icon.png */,
 				198D828617B0116B00535AFB /* BirdWatching */,
 				198D827F17B0116B00535AFB /* Frameworks */,
 				198D827E17B0116B00535AFB /* Products */,
@@ -112,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				198D828F17B0116B00535AFB /* BirdAppDelegate.h */,
+				FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */,
+				FD08CA1217C5E1B300BE5F23 /* Icon.png */,
 				198D829017B0116B00535AFB /* BirdAppDelegate.m */,
 				198D829817B0116B00535AFB /* MainStoryboard.storyboard */,
 				198D82A617B01A6900535AFB /* House.h */,
