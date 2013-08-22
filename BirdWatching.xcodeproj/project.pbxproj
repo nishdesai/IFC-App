@@ -48,6 +48,7 @@
 		FD933E8117C67B7E00C0F627 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E8017C67B7E00C0F627 /* Default.png */; };
 		FD933E8317C67BBC00C0F627 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */; };
 		FD933E8517C67BDA00C0F627 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E8417C67BDA00C0F627 /* Default@2x.png */; };
+		FD933E9317C6B8D500C0F627 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD933E9217C6B8D500C0F627 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,8 @@
 		FD933E8017C67B7E00C0F627 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FD933E8417C67BDA00C0F627 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		FD933E9117C6B8D500C0F627 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FD933E9217C6B8D500C0F627 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 			children = (
 				198D828F17B0116B00535AFB /* BirdAppDelegate.h */,
 				FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */,
+				FD933E9117C6B8D500C0F627 /* MapViewController.h */,
+				FD933E9217C6B8D500C0F627 /* MapViewController.m */,
 				FD08CA1217C5E1B300BE5F23 /* Icon.png */,
 				198D829017B0116B00535AFB /* BirdAppDelegate.m */,
 				198D829817B0116B00535AFB /* MainStoryboard.storyboard */,
@@ -309,6 +314,7 @@
 				198D82AE17B0224900535AFB /* SecondMasterViewController.m in Sources */,
 				198D82B117B022E300535AFB /* SecondDetailViewController.m in Sources */,
 				198D82B417B0388F00535AFB /* RushDataController.m in Sources */,
+				FD933E9317C6B8D500C0F627 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

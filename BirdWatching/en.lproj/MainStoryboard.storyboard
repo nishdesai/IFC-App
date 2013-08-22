@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Pgk-sY-pFP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E3067" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Pgk-sY-pFP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -116,16 +116,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNS-mE-YEO">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Favorite">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-pb-Ytx">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Events for House">
@@ -144,26 +134,38 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By3-2S-PpC">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="View Map">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2rA-uK-NmW" kind="push" id="yd6-gL-uDX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="3eB-1L-Aie"/>
                             <constraint firstItem="P3g-KN-66r" firstAttribute="centerX" secondItem="LQh-vh-tof" secondAttribute="centerX" type="default" id="5rL-oO-dXb"/>
-                            <constraint firstItem="LQh-vh-tof" firstAttribute="centerX" secondItem="UNS-mE-YEO" secondAttribute="centerX" type="default" id="HTU-Qm-AOP"/>
                             <constraint firstItem="WoG-SY-v7d" firstAttribute="top" secondItem="22" secondAttribute="top" constant="35" id="IVt-1t-wff"/>
-                            <constraint firstItem="GKg-pb-Ytx" firstAttribute="top" secondItem="UNS-mE-YEO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YNj-Qg-988"/>
+                            <constraint firstItem="By3-2S-PpC" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="PJT-BX-dby"/>
+                            <constraint firstItem="GKg-pb-Ytx" firstAttribute="top" secondItem="By3-2S-PpC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UWB-Lt-wqz"/>
                             <constraint firstAttribute="bottom" secondItem="GKg-pb-Ytx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ZEQ-Gu-Wc1"/>
-                            <constraint firstItem="GKg-pb-Ytx" firstAttribute="centerX" secondItem="UNS-mE-YEO" secondAttribute="centerX" type="default" id="e2A-9e-gsW"/>
                             <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="P3g-KN-66r" secondAttribute="centerX" type="default" id="hfD-iW-jhF"/>
-                            <constraint firstItem="UNS-mE-YEO" firstAttribute="top" secondItem="LQh-vh-tof" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hmd-IS-kni"/>
                             <constraint firstItem="6n6-Ag-zYL" firstAttribute="top" secondItem="22" secondAttribute="top" constant="81" id="icV-aW-Uuo"/>
                             <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="WoG-SY-v7d" secondAttribute="centerX" type="default" id="jeA-Rp-z2h"/>
+                            <constraint firstItem="By3-2S-PpC" firstAttribute="centerX" secondItem="GKg-pb-Ytx" secondAttribute="centerX" type="default" id="nXE-Ig-wRV"/>
+                            <constraint firstItem="By3-2S-PpC" firstAttribute="top" secondItem="LQh-vh-tof" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y46-mN-xjy"/>
+                            <constraint firstItem="By3-2S-PpC" firstAttribute="centerX" secondItem="LQh-vh-tof" secondAttribute="centerX" type="default" id="z4L-HS-vCF"/>
                             <constraint firstItem="P3g-KN-66r" firstAttribute="top" secondItem="22" secondAttribute="top" constant="131" id="zKc-ne-nVi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="House Info" id="26"/>
                     <connections>
-                        <outlet property="favoriteButton" destination="UNS-mE-YEO" id="rzK-X3-KYy"/>
                         <outlet property="houseAddressLabel" destination="LQh-vh-tof" id="lBU-t0-un5"/>
                         <outlet property="houseBioLabel" destination="P3g-KN-66r" id="QUu-In-mwS"/>
                         <outlet property="houseGreekLabel" destination="6n6-Ag-zYL" id="XNJ-vD-RWd"/>
@@ -172,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="898" y="80"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="vOU-AU-gbh">
@@ -347,6 +349,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kia-HG-sJU" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1363" y="55"/>
+        </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="guU-96-K3Q">
+            <objects>
+                <viewController id="2rA-uK-NmW" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8VT-XS-PQ5" customClass="UIPageControl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="kl8-v3-uWV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGN-IV-YnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="729"/>
         </scene>
         <!--First Detail View Controller - Detail-->
         <scene sceneID="Lps-1p-cqW">
