@@ -7,11 +7,13 @@
 //
 
 #import "BirdAppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation BirdAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [GMSServices provideAPIKey:@"AIzaSyC55h6Uwfpfdi-LNDqeCFsqVf_npiTkJkw"];
     // Override point for customization after application launch.
     return YES;
 }
