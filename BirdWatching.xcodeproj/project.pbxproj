@@ -100,9 +100,9 @@
 		FD933E7A17C67B3F00C0F627 /* LaunchImage-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-568h.png"; path = "../LaunchImage-568h.png"; sourceTree = "<group>"; };
 		FD933E7B17C67B3F00C0F627 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = ../LaunchImage.png; sourceTree = "<group>"; };
 		FD933E7C17C67B3F00C0F627 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage@2x.png"; path = "../LaunchImage@2x.png"; sourceTree = "<group>"; };
-		FD933E8017C67B7E00C0F627 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FD933E8417C67BDA00C0F627 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FD933E8017C67B7E00C0F627 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FD933E8417C67BDA00C0F627 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +135,6 @@
 		198D827417B0116B00535AFB = {
 			isa = PBXGroup;
 			children = (
-				FD933E8417C67BDA00C0F627 /* Default@2x.png */,
-				FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */,
-				FD933E8017C67B7E00C0F627 /* Default.png */,
 				FD933E7217C5E8EA00C0F627 /* SystemConfiguration.framework */,
 				FD933E7017C5E8E100C0F627 /* QuartzCore.framework */,
 				FD933E6E17C5E8D800C0F627 /* OpenGLES.framework */,
@@ -188,6 +185,9 @@
 				FD933E7B17C67B3F00C0F627 /* LaunchImage.png */,
 				FD933E7C17C67B3F00C0F627 /* LaunchImage@2x.png */,
 				198D82A617B01A6900535AFB /* House.h */,
+				FD933E8417C67BDA00C0F627 /* Default@2x.png */,
+				FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */,
+				FD933E8017C67B7E00C0F627 /* Default.png */,
 				198D82A717B01A6900535AFB /* House.m */,
 				198D82B217B0388F00535AFB /* RushDataController.h */,
 				198D82B317B0388F00535AFB /* RushDataController.m */,
