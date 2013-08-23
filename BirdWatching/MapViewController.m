@@ -23,8 +23,12 @@
 - (void)loadView {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:37.867773
-                                                            longitude:-122.254114
+    
+    double lat = [self.house.latitude doubleValue];
+    double lon = [self.house.longitude doubleValue];
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:lat
+                                                            longitude:lon
                                                                  zoom:18];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
@@ -32,8 +36,9 @@
 
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(37.867773, -122.254114);
-    marker.title = @"Sigma Chi";
+    
+    marker.position = CLLocationCoordinate2DMake(lat, lon);
+    marker.title = self.house.name;
     marker.map = mapView_;
 }
 

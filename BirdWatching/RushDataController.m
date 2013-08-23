@@ -50,7 +50,7 @@
             NSString *address = [subDictionary objectForKey:@"address"];
             NSNumber *latitude = [subDictionary objectForKey:@"latitude"];
             NSNumber *longitude = [subDictionary objectForKey:@"longitude"];
-//            NSInteger *cameraHeading = [subDictionary objectForKey:@"heading"];
+            NSInteger cameraHeading = [subDictionary objectForKey:@"heading"];
             NSString *rushChairName = [subDictionary objectForKey:@"rushchair_name"];
             NSString *rushChairNumber = [subDictionary objectForKey:@"rushchair_phone_number"];
             House *house = [[House alloc] initWithName:name
@@ -58,7 +58,7 @@
                                             andAddress:address];
             house.latitude = latitude;
             house.longitude = longitude;
-//            house.cameraHeading = cameraHeading;
+            house.cameraHeading = cameraHeading;
             house.rushChairName = rushChairName;
             house.rushChairPhoneNumber = rushChairNumber;
             

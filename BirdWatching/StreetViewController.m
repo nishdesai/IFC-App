@@ -22,8 +22,11 @@
     panoView_ = [[GMSPanoramaView alloc] initWithFrame:CGRectZero];
     self.view = panoView_;
     
-    [panoView_ moveNearCoordinate:CLLocationCoordinate2DMake(37.867773, -122.254114)];
-    panoView_.camera = [GMSPanoramaCamera cameraWithHeading:100
+    double lat = [self.house.latitude doubleValue];
+    double lon = [self.house.longitude doubleValue];
+    
+    [panoView_ moveNearCoordinate:CLLocationCoordinate2DMake(lat, lon)];
+    panoView_.camera = [GMSPanoramaCamera cameraWithHeading:(int)self.house.cameraHeading
                                                       pitch:0
                                                        zoom:1];
 }
