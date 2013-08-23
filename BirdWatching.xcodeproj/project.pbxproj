@@ -24,8 +24,6 @@
 		198D82AE17B0224900535AFB /* SecondMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D82AD17B0224800535AFB /* SecondMasterViewController.m */; };
 		198D82B117B022E300535AFB /* SecondDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D82B017B022E300535AFB /* SecondDetailViewController.m */; };
 		198D82B417B0388F00535AFB /* RushDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D82B317B0388F00535AFB /* RushDataController.m */; };
-		FD08CA0B17C5DBDA00BE5F23 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD08CA0A17C5DBDA00BE5F23 /* Icon.png */; };
-		FD08CA0F17C5DCAA00BE5F23 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD08CA0E17C5DCAA00BE5F23 /* Icon@2x.png */; };
 		FD08CA1317C5E1B300BE5F23 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD08CA1217C5E1B300BE5F23 /* Icon.png */; };
 		FD08CA1517C5E1BE00BE5F23 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */; };
 		FD933E5D17C5E81300C0F627 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD933E5C17C5E81300C0F627 /* AVFoundation.framework */; };
@@ -81,8 +79,6 @@
 		198D82B017B022E300535AFB /* SecondDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDetailViewController.m; sourceTree = "<group>"; };
 		198D82B217B0388F00535AFB /* RushDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushDataController.h; sourceTree = "<group>"; };
 		198D82B317B0388F00535AFB /* RushDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushDataController.m; sourceTree = "<group>"; };
-		FD08CA0A17C5DBDA00BE5F23 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "../../../Downloads/icons_draft_01/App Icon [Squared]/Icon.png"; sourceTree = "<group>"; };
-		FD08CA0E17C5DCAA00BE5F23 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../Downloads/icons_draft_01/App Icon [Squared]/Icon@2x.png"; sourceTree = "<group>"; };
 		FD08CA1217C5E1B300BE5F23 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		FD933E5C17C5E81300C0F627 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -221,8 +217,6 @@
 			children = (
 				198D828817B0116B00535AFB /* BirdWatching-Info.plist */,
 				198D828917B0116B00535AFB /* InfoPlist.strings */,
-				FD08CA0A17C5DBDA00BE5F23 /* Icon.png */,
-				FD08CA0E17C5DCAA00BE5F23 /* Icon@2x.png */,
 				198D828C17B0116B00535AFB /* main.m */,
 				198D828E17B0116B00535AFB /* BirdWatching-Prefix.pch */,
 				198D829217B0116B00535AFB /* Default.png */,
@@ -289,8 +283,6 @@
 				198D829517B0116B00535AFB /* Default@2x.png in Resources */,
 				198D829717B0116B00535AFB /* Default-568h@2x.png in Resources */,
 				198D829A17B0116B00535AFB /* MainStoryboard.storyboard in Resources */,
-				FD08CA0B17C5DBDA00BE5F23 /* Icon.png in Resources */,
-				FD08CA0F17C5DCAA00BE5F23 /* Icon@2x.png in Resources */,
 				FD08CA1317C5E1B300BE5F23 /* Icon.png in Resources */,
 				FD08CA1517C5E1BE00BE5F23 /* Icon@2x.png in Resources */,
 				FD933E7717C5EB0800C0F627 /* GoogleMaps.bundle in Resources */,
