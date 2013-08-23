@@ -13,7 +13,7 @@
 @interface SecondDetailViewController : UIViewController
 
 
-@property (strong, nonatomic) House *house;
+@property (nonatomic, retain) House *house;
 @property (weak, nonatomic) IBOutlet UILabel *houseNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseBioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseAddressLabel;

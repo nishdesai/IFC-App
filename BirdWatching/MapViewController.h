@@ -12,6 +12,6 @@
 
 @interface MapViewController : UIViewController
 
-@property (nonatomic, copy) House *house;
+@property (nonatomic, retain) House *house;
 
 @end
