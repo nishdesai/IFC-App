@@ -105,8 +105,10 @@
             }
         }
         
-        [defaults setObject:self.events forKey:@"eventsArray"];
-        [defaults setObject:self.houses forKey:@"houseArray"];
+        NSData *housesData = [NSKeyedArchiver archivedDataWithRootObject:self.houses];
+        NSData *eventData = [NSKeyedArchiver archivedDataWithRootObject:self.events];
+        [defaults setObject:eventData forKey:@"eventsArray"];
+        [defaults setObject:housesData forKey:@"houseArray"];
         [defaults synchronize];
         
         if ([self.houses count] == 0) {
@@ -114,7 +116,7 @@
         }
         
     } else if ([defaults objectForKey:@"eventsArray"] != nil){
-        self.events = [defaults objectForKey:@"eventsArray"];
+        self.events = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"eventsArray"]];
     } else {
         self.events = [NSMutableArray arrayWithObject:[[Event alloc] initWithHouse:nil andName:@"Data Loading Error" andDate:nil andDescription:nil]];
     }
