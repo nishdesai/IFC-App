@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E3067" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Pgk-sY-pFP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Pgk-sY-pFP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -144,7 +144,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2rA-uK-NmW" kind="push" id="yd6-gL-uDX"/>
+                                    <segue destination="2rA-uK-NmW" kind="push" identifier="HouseMapSegue" id="yd6-gL-uDX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -362,7 +362,7 @@
                     <navigationItem key="navigationItem" title="Map" id="kl8-v3-uWV">
                         <barButtonItem key="rightBarButtonItem" title="Street View" id="Y4T-Kc-ZJj">
                             <connections>
-                                <segue destination="38Z-JU-aWc" kind="push" id="bC2-j9-Lls"/>
+                                <segue destination="38Z-JU-aWc" kind="push" identifier="StreetViewSegue" id="bC2-j9-Lls"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -434,6 +434,42 @@
             <point key="canvasLocation" x="1870" y="55"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="BirdDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="eventDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="eventDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="eventHouseButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="eventNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BirdMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdMasterViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SecondDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="favoriteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="houseAddressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="houseBioLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="houseGreekLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="houseNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SecondMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondMasterViewController.h"/>
+        </class>
+        <class className="StreetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StreetViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

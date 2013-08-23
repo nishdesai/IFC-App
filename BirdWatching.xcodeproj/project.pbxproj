@@ -182,13 +182,13 @@
 		198D828617B0116B00535AFB /* BirdWatching */ = {
 			isa = PBXGroup;
 			children = (
-				198D828F17B0116B00535AFB /* BirdAppDelegate.h */,
 				FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */,
 				FD933E9117C6B8D500C0F627 /* MapViewController.h */,
 				FD933E9217C6B8D500C0F627 /* MapViewController.m */,
 				FD933E9717C6D40A00C0F627 /* StreetViewController.h */,
 				FD933E9817C6D40A00C0F627 /* StreetViewController.m */,
 				FD08CA1217C5E1B300BE5F23 /* Icon.png */,
+				198D828F17B0116B00535AFB /* BirdAppDelegate.h */,
 				198D829017B0116B00535AFB /* BirdAppDelegate.m */,
 				198D829817B0116B00535AFB /* MainStoryboard.storyboard */,
 				FD933E7A17C67B3F00C0F627 /* LaunchImage-568h.png */,

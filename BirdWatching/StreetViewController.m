@@ -8,6 +8,7 @@
 
 #import "StreetViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "House.h"
 
 @interface StreetViewController ()
 
@@ -40,6 +41,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.title = [self.house.greek stringByAppendingString:@" Street View"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class House;
+
 @interface MapViewController : UIViewController
+
+@property (nonatomic, copy) House *house;
 
 @end

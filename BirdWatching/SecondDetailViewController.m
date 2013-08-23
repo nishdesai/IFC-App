@@ -11,6 +11,7 @@
 #import "RushDataController.h"
 #import "House.h"
 #import "Event.h"
+#import "MapViewController.h"
 
 @interface SecondDetailViewController ()
 - (void)configureView;
@@ -51,6 +52,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    self.navigationItem.title = self.house.greek;
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,8 +65,10 @@
 {
     if ([[segue identifier] isEqualToString:@"HouseEventsSegue"]) {
         BirdMasterViewController *masterViewController = [segue destinationViewController];
-        
         masterViewController.dataController.events = self.house.events;
+    } else if ([[segue identifier] isEqualToString:@"HouseMapSegue"]){
+        MapViewController *mapView = [segue destinationViewController];
+        mapView.house = self.house;
     }
 }
 

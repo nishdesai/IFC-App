@@ -8,6 +8,8 @@
 
 #import "MapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "House.h"
+#import "StreetViewController.h"
 
 @interface MapViewController ()
 
@@ -48,12 +50,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.title = [self.house.greek stringByAppendingString:@" Map"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"StreetViewSegue"]) {
+        StreetViewController *streetView = [segue destinationViewController];
+        
+        streetView.house = self.house;
+    }
 }
 
 @end
