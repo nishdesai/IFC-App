@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *houseGreekLabel;
 @property (weak, nonatomic) IBOutlet FUIButton *mapButton;
 @property (weak, nonatomic) IBOutlet FUIButton *eventsButton;
+@property (weak, nonatomic) IBOutlet UILabel *rushChairName;
+@property (weak, nonatomic) IBOutlet UILabel *rushChairNumber;
 
 
 @end

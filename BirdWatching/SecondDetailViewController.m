@@ -47,6 +47,8 @@
         self.houseAddressLabel.text = h.address;
         self.houseGreekLabel.text = h.greek;
         self.view.backgroundColor = [UIColor cloudsColor];
+        self.rushChairName.text = h.rushChairName;
+        self.rushChairNumber.text = h.rushChairPhoneNumber;
         
     }
 }
