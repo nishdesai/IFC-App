@@ -64,10 +64,8 @@
                                                     andName: eventName
                                                     andDate:eventDate
                                              andDescription:eventDescription];
-                
                 [houseEvents addObject:event];
             }
-            
             house.events = houseEvents;
             [houseList addObject:house];
             [self.events addObjectsFromArray:houseEvents];
@@ -87,9 +85,14 @@
             }
         }
         
+        [defaults setObject:self.events forKey:@"eventsArray"];
+        
         if ([self.houses count] == 0) {
             self.houses = houseList;
         }
+        
+    } else {
+        self.events = [defaults objectForKey:@"eventsArray"];
     }
 
     
