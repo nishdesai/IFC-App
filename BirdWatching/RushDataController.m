@@ -64,11 +64,15 @@
                                                     andName: eventName
                                                     andDate:eventDate
                                              andDescription:eventDescription];
-                [houseEvents addObject:event];
+                if ([eventDate timeIntervalSinceNow] >= 0) {
+                    [houseEvents addObject:event];
+                }
             }
             house.events = houseEvents;
             [houseList addObject:house];
-            [self.events addObjectsFromArray:houseEvents];
+            if ([houseEvents count] > 0) {
+                [self.events addObjectsFromArray:houseEvents];
+            }
             
             if ([self.houses count] > 0) {
                 BOOL isInHouseList = NO;
@@ -86,13 +90,16 @@
         }
         
         [defaults setObject:self.events forKey:@"eventsArray"];
+        [defaults synchronize];
         
         if ([self.houses count] == 0) {
             self.houses = houseList;
         }
         
-    } else {
+    } else if ([defaults objectForKey:@"eventsArray"] != nil){
         self.events = [defaults objectForKey:@"eventsArray"];
+    } else {
+        self.events = [NSMutableArray arrayWithObject:[[Event alloc] initWithHouse:nil andName:@"Data Loading Error" andDate:nil andDescription:nil]];
     }
 
     
@@ -153,8 +160,9 @@
                                                     andName: eventName
                                                     andDate:eventDate
                                              andDescription:eventDescription];
-                
-                [houseEvents addObject:event];
+                if ([eventDate timeIntervalSinceNow] >= 0) {
+                    [houseEvents addObject:event];
+                }
             }
             
             for (House *h in self.houses) {
@@ -163,9 +171,15 @@
                     break;
                 }
             }
-            [self.events addObjectsFromArray:houseEvents];
+            
+            if ([houseEvents count] > 0){
+                [self.events addObjectsFromArray:houseEvents];
+            }
         }
         
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.events forKey:@"eventsArray"];
+        [defaults synchronize];
     }
     
     // UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
