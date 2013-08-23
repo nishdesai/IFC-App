@@ -32,10 +32,14 @@
         NSMutableArray *splitName = (NSMutableArray *)[name componentsSeparatedByString:@" "];
         NSMutableArray *greekNameArray = [[NSMutableArray alloc] init];
         for (NSString *letter in splitName) {
-            [greekNameArray addObject:[greekLetters objectForKey:letter]];
+            if ([greekLetters objectForKey:letter] != nil) {
+                [greekNameArray addObject:[greekLetters objectForKey:letter]];
+            }
         }
         
-        _greek = [greekNameArray componentsJoinedByString:@""];
+        if ([greekNameArray count] == [splitName count]) {
+            _greek = [greekNameArray componentsJoinedByString:@""];
+        }
         
         return self;
     }

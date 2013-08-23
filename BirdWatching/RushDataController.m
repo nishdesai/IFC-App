@@ -31,21 +31,36 @@
         NSLog([NSString stringWithFormat:@"%d", [houseArray count]]);
         self.houses = houseArray;
     }
-
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ucb-ifc.herokuapp.com/home.json"]]
-                                                         options:NSJSONReadingMutableContainers
-                                                           error:nil];
+    
+    NSDictionary *data;
+    NSData *jsonPage = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ucb-ifc.herokuapp.com/home.json"]];
+    if (jsonPage != nil) {
+        data = [NSJSONSerialization JSONObjectWithData:jsonPage
+                                                options:NSJSONReadingMutableContainers
+                                                  error:nil];
+    }
     
     if (data) {
         for (id key in data) {
+            NSLog(@"looping");
             NSMutableArray *houseEvents = [[NSMutableArray alloc] init];
             NSDictionary *subDictionary = [data objectForKey:key];
             NSString *name = [subDictionary objectForKey:@"name"];
             NSString *bio = [subDictionary objectForKey:@"bio"];
-            NSString *address = @"address placeholder";
+            NSString *address = [subDictionary objectForKey:@"address"];
+            NSNumber *latitude = [subDictionary objectForKey:@"latitude"];
+            NSNumber *longitude = [subDictionary objectForKey:@"longitude"];
+//            NSInteger *cameraHeading = [subDictionary objectForKey:@"heading"];
+            NSString *rushChairName = [subDictionary objectForKey:@"rushchair_name"];
+            NSString *rushChairNumber = [subDictionary objectForKey:@"rushchair_phone_number"];
             House *house = [[House alloc] initWithName:name
                                                 andBio:bio
                                             andAddress:address];
+            house.latitude = latitude;
+            house.longitude = longitude;
+//            house.cameraHeading = cameraHeading;
+            house.rushChairName = rushChairName;
+            house.rushChairPhoneNumber = rushChairNumber;
             
             NSArray *calendar = [subDictionary objectForKey:@"calendar"];
             
@@ -56,7 +71,7 @@
                 
                 NSDateFormatter *df = [[NSDateFormatter alloc] init];
                 //Change JSON event date/times to this format.
-                [df setDateFormat:@"dd/MM/yyyy hh:mm a"];
+                [df setDateFormat:@"dd/MM/yyyy hh:mm"];
                 NSString *dateString = [houseEvent objectForKey:@"time"];
                 NSDate *eventDate = [df dateFromString:dateString];
                 
@@ -64,6 +79,7 @@
                                                     andName: eventName
                                                     andDate:eventDate
                                              andDescription:eventDescription];
+                
                 if ([eventDate timeIntervalSinceNow] >= 0) {
                     [houseEvents addObject:event];
                 }
@@ -90,6 +106,7 @@
         }
         
         [defaults setObject:self.events forKey:@"eventsArray"];
+        [defaults setObject:self.houses forKey:@"houseArray"];
         [defaults synchronize];
         
         if ([self.houses count] == 0) {
@@ -106,18 +123,18 @@
 
 // UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
     
-//   NSDate *prevDate;
-//   int numOfEvents = 0;
-//   for (int i = 0; i < [self.events count]; i++) {
-//       if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
-//            numOfEvents++;
-//        } else {
-//            [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
-//            numOfEvents = 0;
-//            prevDate = ((Event *)[self.events objectAtIndex:i]).date;
-//        }
-//    }
-//    [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
+   NSDate *prevDate;
+   int numOfEvents = 0;
+   for (int i = 0; i < [self.events count]; i++) {
+       if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
+            numOfEvents++;
+        } else {
+            [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
+            numOfEvents = 0;
+            prevDate = ((Event *)[self.events objectAtIndex:i]).date;
+        }
+    }
+    [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
     
     self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
 }
@@ -184,18 +201,18 @@
     
     // UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
     
-    //   NSDate *prevDate;
-    //   int numOfEvents = 0;
-    //   for (int i = 0; i < [self.events count]; i++) {
-    //       if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
-    //            numOfEvents++;
-    //        } else {
-    //            [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
-    //            numOfEvents = 0;
-    //            prevDate = ((Event *)[self.events objectAtIndex:i]).date;
-    //        }
-    //    }
-    //    [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
+       NSDate *prevDate;
+       int numOfEvents = 0;
+       for (int i = 0; i < [self.events count]; i++) {
+           if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
+                numOfEvents++;
+            } else {
+                [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
+                numOfEvents = 0;
+                prevDate = ((Event *)[self.events objectAtIndex:i]).date;
+            }
+        }
+        [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
     
     self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
 

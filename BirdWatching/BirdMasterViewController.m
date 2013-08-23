@@ -109,10 +109,12 @@
     
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"hh:mm"];
     
     Event *eventAtIndex = [self.dataController objectInEventsAtIndex:indexPath.row];
     [[cell textLabel] setText:eventAtIndex.eventName];
-    [[cell detailTextLabel] setText:[eventAtIndex.houseName stringByAppendingString:@" @ 6:00"]];
+    [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.house.name]]];
     return cell;
     
 }

@@ -70,6 +70,8 @@
     [[cell textLabel] setText:houseAtIndex.name];
     if (houseAtIndex.greek != nil) {
         [[cell detailTextLabel] setText:houseAtIndex.greek];
+    } else {
+        [[cell detailTextLabel] setText:@""];
     }
     cell.showsReorderControl = YES;
     return cell;
