@@ -292,7 +292,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="x4P-11-PwM" secondAttribute="bottom" constant="146" id="2ce-W9-zNZ"/>
+                            <constraint firstAttribute="bottom" secondItem="x4P-11-PwM" secondAttribute="bottom" constant="118" id="8ns-TR-NS2"/>
+                            <constraint firstItem="x4P-11-PwM" firstAttribute="centerX" secondItem="2C9-0g-71E" secondAttribute="centerX" type="default" id="BIU-pu-Syq"/>
                             <constraint firstItem="ayW-1C-PcP" firstAttribute="top" secondItem="2C9-0g-71E" secondAttribute="top" constant="99" id="Eof-XG-aOq"/>
                             <constraint firstItem="rQD-gR-wLv" firstAttribute="centerX" secondItem="ayW-1C-PcP" secondAttribute="centerX" type="default" id="Fwu-BY-GI5"/>
                             <constraint firstItem="x4P-11-PwM" firstAttribute="centerX" secondItem="WeY-PJ-eNR" secondAttribute="centerX" type="default" id="KUi-Rt-Qea"/>
@@ -301,7 +302,6 @@
                             <constraint firstItem="ayW-1C-PcP" firstAttribute="centerX" secondItem="akU-Ut-VRO" secondAttribute="centerX" type="default" id="QHD-7o-l3n"/>
                             <constraint firstItem="rQD-gR-wLv" firstAttribute="centerX" secondItem="WeY-PJ-eNR" secondAttribute="centerX" type="default" id="ZD8-8r-fCe"/>
                             <constraint firstItem="akU-Ut-VRO" firstAttribute="top" secondItem="2C9-0g-71E" secondAttribute="top" constant="25" id="pCB-u4-zum"/>
-                            <constraint firstItem="ayW-1C-PcP" firstAttribute="centerX" secondItem="2C9-0g-71E" secondAttribute="centerX" type="default" id="pnH-gh-Tiy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Event Info" id="3P1-uR-0Fo"/>
@@ -427,12 +427,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq9-Uu-9F6">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remind 1 Hour Before Event">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reminderButtonPress:" destination="Yxd-9n-MLF" eventType="touchUpInside" id="YgW-rC-977"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cgV-dW-mFz" firstAttribute="leading" secondItem="ERn-df-QDH" secondAttribute="leading" constant="142" id="IYb-TH-o0c"/>
+                            <constraint firstAttribute="bottom" secondItem="Nq9-Uu-9F6" secondAttribute="bottom" constant="154" id="GoP-fs-GWk"/>
                             <constraint firstItem="4u4-ri-KzI" firstAttribute="top" secondItem="ERn-df-QDH" secondAttribute="top" constant="94" id="Ia6-PV-kB0"/>
                             <constraint firstItem="znl-q1-dJI" firstAttribute="top" secondItem="ERn-df-QDH" secondAttribute="top" constant="146" id="UCd-9v-0mf"/>
+                            <constraint firstItem="Nq9-Uu-9F6" firstAttribute="centerX" secondItem="ERn-df-QDH" secondAttribute="centerX" type="default" id="W3x-Ek-WHk"/>
+                            <constraint firstItem="4u4-ri-KzI" firstAttribute="leading" secondItem="ERn-df-QDH" secondAttribute="leading" constant="121" id="X5f-Xo-TRu"/>
                             <constraint firstItem="znl-q1-dJI" firstAttribute="centerX" secondItem="4u4-ri-KzI" secondAttribute="centerX" type="default" id="YUQ-7X-XGp"/>
                             <constraint firstItem="cgV-dW-mFz" firstAttribute="top" secondItem="ERn-df-QDH" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dL8-Ae-qOw"/>
                             <constraint firstItem="4u4-ri-KzI" firstAttribute="centerX" secondItem="cgV-dW-mFz" secondAttribute="centerX" type="default" id="geJ-18-3Rx"/>
@@ -443,6 +458,7 @@
                         <outlet property="eventDateLabel" destination="znl-q1-dJI" id="HEo-EH-I1T"/>
                         <outlet property="eventDescriptionLabel" destination="4u4-ri-KzI" id="h2X-eo-XwT"/>
                         <outlet property="eventNameLabel" destination="cgV-dW-mFz" id="32I-yq-kvk"/>
+                        <outlet property="reminderButton" destination="Nq9-Uu-9F6" id="fes-YF-AE3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d30-Vx-sE3" sceneMemberID="firstResponder"/>

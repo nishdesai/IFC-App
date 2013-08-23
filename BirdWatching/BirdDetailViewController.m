@@ -54,6 +54,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    BOOL notificationExists = NO;
+    for (UILocalNotification *localNotification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+        if ([[localNotification.userInfo objectForKey:@"name"] isEqualToString:self.event.eventName]) {
+            notificationExists = YES;
+            break;
+        }
+    }
+    if (notificationExists) {
+        [self.reminderButton setTitle:@"Remove Reminder" forState:UIControlStateNormal];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,19 +78,20 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     UILocalNotification *notification = (UILocalNotification *)[NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:self.event.eventName]];
     
-    if (!self.event.reminder) {
+    BOOL notificationExists = NO;
+    for (UILocalNotification *localNotification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+        if ([[localNotification.userInfo objectForKey:@"name"] isEqualToString:self.event.eventName]) {
+            [[UIApplication sharedApplication] cancelLocalNotification:localNotification];
+            [self.reminderButton setTitle:@"Remind 1 Hour Before Event" forState:UIControlStateNormal];
+            self.event.reminder = NO;
+            notificationExists = YES;
+            break;
+        }
+    }
+    if (!notificationExists) {
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
         [self.reminderButton setTitle:@"Cancel Reminder" forState:UIControlStateNormal];
         self.event.reminder = YES;
-    } else {
-        for (UILocalNotification *localNotification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
-            if ([localNotification.userInfo objectForKey:@"name"] == self.event.eventName) {
-                [[UIApplication sharedApplication] cancelLocalNotification:localNotification];
-                break;
-            }
-        }
-        [self.reminderButton setTitle:@"Remind 1 Hour Before Event" forState:UIControlStateNormal];
-        self.event.reminder = NO;
     }
 }
 
