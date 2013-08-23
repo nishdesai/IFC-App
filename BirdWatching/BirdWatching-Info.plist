@@ -49,6 +49,10 @@
 	<true/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackTranslucent</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Regular.tff</string>
+	</array>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>

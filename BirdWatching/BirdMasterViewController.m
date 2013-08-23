@@ -11,6 +11,21 @@
 #import "RushDataController.h"
 #import "Event.h"
 #import "House.h"
+#import "UIColor+FlatUI.h"
+#import "UISlider+FlatUI.h"
+#import "UIStepper+FlatUI.h"
+#import "UITabBar+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "FUIButton.h"
+#import "FUISwitch.h"
+#import "UIFont+FlatUI.h"
+#import "FUIAlertView.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIProgressView+FlatUI.h"
+#import "FUISegmentedControl.h"
+#import "UIPopoverController+FlatUI.h"
+#import "UITableViewCell+FlatUI.h"
+#import "UIColor+FlatUI.h"
 
 @interface BirdMasterViewController ()
 
@@ -37,6 +52,11 @@
                                               selector:@selector(checkForRefresh:)
                                                   name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+                                  highlightedColor:[UIColor belizeHoleColor]
+                                      cornerRadius:3
+                                   whenContainedIn:[UINavigationBar class], nil];
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
 //	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = nil;
@@ -44,6 +64,7 @@
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
 
 - (void)checkForRefresh:(NSNotification *)notification {
     NSLog(@"Message Received");
@@ -108,7 +129,7 @@
     static NSString *CellIdentifier = @"EventCell";
     
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"hh:mm"];
     

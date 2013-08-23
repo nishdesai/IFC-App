@@ -11,6 +11,21 @@
 #import "RushDataController.h"
 #import "House.h"
 #import "Event.h"
+#import "UIColor+FlatUI.h"
+#import "UISlider+FlatUI.h"
+#import "UIStepper+FlatUI.h"
+#import "UITabBar+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "FUIButton.h"
+#import "FUISwitch.h"
+#import "UIFont+FlatUI.h"
+#import "FUIAlertView.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIProgressView+FlatUI.h"
+#import "FUISegmentedControl.h"
+#import "UIPopoverController+FlatUI.h"
+#import "UITableViewCell+FlatUI.h"
+#import "UIColor+FlatUI.h"
 
 @implementation SecondMasterViewController
 
@@ -28,7 +43,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = nil;
 //    
+    
+    
+
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+                                  highlightedColor:[UIColor belizeHoleColor]
+                                      cornerRadius:3
+                                   whenContainedIn:[UINavigationBar class], nil];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
+    
 }
 
 
@@ -64,7 +88,7 @@
         formatter = [[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
     
     House *houseAtIndex = [self.dataController objectInHousesAtIndex:indexPath.row];
     [[cell textLabel] setText:houseAtIndex.name];
@@ -74,6 +98,7 @@
         [[cell detailTextLabel] setText:@""];
     }
     cell.showsReorderControl = YES;
+    cell.textLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:12];
     return cell;
 }
 

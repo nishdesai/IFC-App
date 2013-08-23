@@ -26,7 +26,9 @@
     
     double lat = [self.house.latitude doubleValue];
     double lon = [self.house.longitude doubleValue];
-    
+    lat = 37.867705;
+    lon = -122.254127;
+
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:lat
                                                             longitude:lon
                                                                  zoom:18];

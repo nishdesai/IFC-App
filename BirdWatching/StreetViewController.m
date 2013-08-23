@@ -24,9 +24,11 @@
     
     double lat = [self.house.latitude doubleValue];
     double lon = [self.house.longitude doubleValue];
+    lat = 37.867705;
+    lon = -122.254127;
     
     [panoView_ moveNearCoordinate:CLLocationCoordinate2DMake(lat, lon)];
-    panoView_.camera = [GMSPanoramaCamera cameraWithHeading:(int)self.house.cameraHeading
+    panoView_.camera = [GMSPanoramaCamera cameraWithHeading:65
                                                       pitch:0
                                                        zoom:1];
 }

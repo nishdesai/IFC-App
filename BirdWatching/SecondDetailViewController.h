@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIColor+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "FUIButton.h"
+
 
 @class House;
 
@@ -17,7 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *houseBioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseAddressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseGreekLabel;
-@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet FUIButton *mapButton;
+@property (weak, nonatomic) IBOutlet FUIButton *eventsButton;
 
 
 @end

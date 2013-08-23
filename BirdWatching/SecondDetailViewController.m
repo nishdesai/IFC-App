@@ -13,6 +13,7 @@
 #import "Event.h"
 #import "MapViewController.h"
 
+
 @interface SecondDetailViewController ()
 - (void)configureView;
 @end
@@ -35,6 +36,7 @@
 
 - (void)configureView
 {
+    
     // Update the user interface for the detail item.
     
     House *h = self.house;
@@ -44,6 +46,8 @@
         self.houseBioLabel.text = h.bio;
         self.houseAddressLabel.text = h.address;
         self.houseGreekLabel.text = h.greek;
+        self.view.backgroundColor = [UIColor cloudsColor];
+        
     }
 }
 
@@ -53,6 +57,24 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     self.navigationItem.title = self.house.greek;
+    
+    // Style mapButton
+    self.mapButton.buttonColor = [UIColor tangerineColor];
+    self.mapButton.shadowColor = [UIColor wetAsphaltColor];
+    self.mapButton.shadowHeight = 3.0f;
+    self.mapButton.cornerRadius = 6.0f;
+    self.mapButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    [self.mapButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.mapButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    // Style eventsButton
+    self.eventsButton.buttonColor = [UIColor tangerineColor];
+    self.eventsButton.shadowColor = [UIColor wetAsphaltColor];
+    self.eventsButton.shadowHeight = 3.0f;
+    self.eventsButton.cornerRadius = 6.0f;
+    self.eventsButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    [self.eventsButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.eventsButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning
