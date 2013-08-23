@@ -19,6 +19,21 @@
         _date = date;
         _description = description;
         _houseName = house.name;
+        _reminder = NO;
+        
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.fireDate = [date dateByAddingTimeInterval:-3600];
+        notification.alertBody = [NSString stringWithFormat:@"%@ at %@ in 1 hour", name, house.greek];
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        notification.userInfo = [NSDictionary dictionaryWithObject:name forKey:@"name"];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:notification];
+        [defaults setObject:data forKey:name];
+        [defaults synchronize];
+        
+        
+        
         return self;
     }
     return nil;

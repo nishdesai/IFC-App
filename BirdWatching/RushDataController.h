@@ -14,8 +14,8 @@
 @interface RushDataController : NSObject
 
 
-@property (nonatomic, copy) NSMutableArray *houses;
-@property (nonatomic, copy) NSMutableArray *events;
+@property (nonatomic, retain) NSMutableArray *houses;
+@property (nonatomic, retain) NSMutableArray *events;
 @property BOOL hasFavoriteHouses;
 @property (nonatomic, copy) NSMutableArray *eventsForDay;
 

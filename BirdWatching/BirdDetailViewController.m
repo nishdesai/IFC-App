@@ -62,6 +62,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)reminderButtonPress:(id)sender{
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    UILocalNotification *notification = (UILocalNotification *)[NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:self.event.eventName]];
+    
+    if (!self.event.reminder) {
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+        [self.reminderButton setTitle:@"Cancel Reminder" forState:UIControlStateNormal];
+        self.event.reminder = YES;
+    } else {
+        for (UILocalNotification *localNotification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+            if ([localNotification.userInfo objectForKey:@"name"] == self.event.eventName) {
+                [[UIApplication sharedApplication] cancelLocalNotification:localNotification];
+                break;
+            }
+        }
+        [self.reminderButton setTitle:@"Remind 1 Hour Before Event" forState:UIControlStateNormal];
+        self.event.reminder = NO;
+    }
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"HouseInfoSegue"]) {

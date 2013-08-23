@@ -12,7 +12,6 @@
 
 @interface SecondDetailViewController : UIViewController
 
-
 @property (nonatomic, retain) House *house;
 @property (weak, nonatomic) IBOutlet UILabel *houseNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *houseBioLabel;

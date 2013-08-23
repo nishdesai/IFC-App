@@ -53,6 +53,11 @@
     [coder encodeObject:self.bio forKey:@"bio"];
     [coder encodeObject:self.greek forKey:@"greek"];
     [coder encodeObject:self.events forKey:@"events"];
+    [coder encodeObject:self.latitude forKey:@"latutude"];
+    [coder encodeObject:self.longitude forKey:@"longitude"];
+    [coder encodeInt:self.cameraHeading forKey:@"heading"];
+    [coder encodeObject:self.rushChairName forKey:@"ruchChairName"];
+    [coder encodeObject:self.rushChairPhoneNumber forKey:@"rushChairNumber"];
 }
 
 - (id)initWithCoder:(NSCoder *)coder;
@@ -65,6 +70,11 @@
         self.bio = [coder decodeObjectForKey:@"bio"];
         self. greek = [coder decodeObjectForKey:@"greek"];
         self.events = [coder decodeObjectForKey:@"events"];
+        self.latitude = [coder decodeObjectForKey:@"latitude"];
+        self.longitude = [coder decodeObjectForKey:@"longitude"];
+        self.cameraHeading = [coder decodeIntegerForKey:@"heading"];
+        self.rushChairName = [coder decodeObjectForKey:@"rushChairName"];
+        self.rushChairPhoneNumber = [coder decodeObjectForKey:@"rushChairNumber"];
     }
     return self;
 }
