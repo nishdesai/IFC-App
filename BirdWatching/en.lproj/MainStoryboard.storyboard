@@ -132,11 +132,6 @@
                                     <segue destination="JDb-gU-zMS" kind="push" identifier="HouseEventsSegue" id="rrG-TQ-XQm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Greek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-Ag-zYL">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By3-2S-PpC" customClass="FUIButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="303" id="197-AD-0gK"/>
@@ -158,16 +153,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P3g-KN-66r" firstAttribute="centerX" secondItem="LQh-vh-tof" secondAttribute="centerX" type="default" id="5rL-oO-dXb"/>
-                            <constraint firstItem="WoG-SY-v7d" firstAttribute="top" secondItem="22" secondAttribute="top" constant="35" id="IVt-1t-wff"/>
                             <constraint firstAttribute="bottom" secondItem="GKg-pb-Ytx" secondAttribute="bottom" constant="8" id="OON-Hx-BAm"/>
                             <constraint firstAttribute="bottom" secondItem="By3-2S-PpC" secondAttribute="bottom" constant="61" id="bln-Oa-nXT"/>
                             <constraint firstItem="By3-2S-PpC" firstAttribute="trailing" secondItem="GKg-pb-Ytx" secondAttribute="trailing" type="default" id="cVw-9W-OKa"/>
+                            <constraint firstItem="P3g-KN-66r" firstAttribute="centerX" secondItem="WoG-SY-v7d" secondAttribute="centerX" type="default" id="dV2-NG-MQj"/>
                             <constraint firstItem="By3-2S-PpC" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="8" id="du7-Gk-gyk"/>
-                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="P3g-KN-66r" secondAttribute="centerX" type="default" id="hfD-iW-jhF"/>
-                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="top" secondItem="22" secondAttribute="top" constant="81" id="icV-aW-Uuo"/>
-                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="WoG-SY-v7d" secondAttribute="centerX" type="default" id="jeA-Rp-z2h"/>
+                            <constraint firstItem="P3g-KN-66r" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="dvD-PF-wjT"/>
+                            <constraint firstItem="WoG-SY-v7d" firstAttribute="top" secondItem="22" secondAttribute="top" constant="28" id="eP2-SL-nsD"/>
                             <constraint firstItem="By3-2S-PpC" firstAttribute="leading" secondItem="GKg-pb-Ytx" secondAttribute="leading" type="default" id="jwV-38-Kvi"/>
-                            <constraint firstItem="6n6-Ag-zYL" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="xAi-9x-Rhf"/>
                             <constraint firstItem="By3-2S-PpC" firstAttribute="top" secondItem="LQh-vh-tof" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y46-mN-xjy"/>
                             <constraint firstItem="P3g-KN-66r" firstAttribute="top" secondItem="22" secondAttribute="top" constant="131" id="zKc-ne-nVi"/>
                         </constraints>
@@ -177,7 +170,6 @@
                         <outlet property="eventsButton" destination="GKg-pb-Ytx" id="BLD-hq-X3o"/>
                         <outlet property="houseAddressLabel" destination="LQh-vh-tof" id="lBU-t0-un5"/>
                         <outlet property="houseBioLabel" destination="P3g-KN-66r" id="QUu-In-mwS"/>
-                        <outlet property="houseGreekLabel" destination="6n6-Ag-zYL" id="XNJ-vD-RWd"/>
                         <outlet property="houseNameLabel" destination="WoG-SY-v7d" id="K5v-aO-zaJ"/>
                         <outlet property="mapButton" destination="By3-2S-PpC" id="lqB-EW-55b"/>
                     </connections>

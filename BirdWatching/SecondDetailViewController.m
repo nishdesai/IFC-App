@@ -57,6 +57,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     self.navigationItem.title = self.house.greek;
+    self.houseNameLabel.font = [UIFont systemFontOfSize:30];
     
     // Style mapButton
     self.mapButton.buttonColor = [UIColor tangerineColor];
