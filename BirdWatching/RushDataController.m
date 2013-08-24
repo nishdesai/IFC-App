@@ -33,7 +33,7 @@
     }
     
     NSDictionary *data;
-    NSData *jsonPage = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://mfast.herokuapp.com/greek"]];
+    NSData *jsonPage = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AlonDaks/ifc-json/master/ifc.json"]];
     if (jsonPage != nil) {
         data = [NSJSONSerialization JSONObjectWithData:jsonPage
                                                 options:NSJSONReadingMutableContainers
@@ -147,7 +147,7 @@
     self.events = eventList;
     
     
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://mfast.herokuapp.com/greek"]]
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AlonDaks/ifc-json/master/ifc.json"]]
                                                          options:NSJSONReadingMutableContainers
                                                            error:nil];
     
