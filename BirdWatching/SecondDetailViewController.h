@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet FUIButton *eventsButton;
 @property (weak, nonatomic) IBOutlet UILabel *rushChairName;
 @property (weak, nonatomic) IBOutlet UILabel *rushChairNumber;
+//New Properties
+@property (weak, nonatomic) IBOutlet UILabel *rushChair;
 
 
 @end

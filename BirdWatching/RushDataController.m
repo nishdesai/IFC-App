@@ -33,7 +33,7 @@
     }
     
     NSDictionary *data;
-    NSData *jsonPage = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ucb-ifc.herokuapp.com/home.json"]];
+    NSData *jsonPage = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://mfast.herokuapp.com/greek"]];
     if (jsonPage != nil) {
         data = [NSJSONSerialization JSONObjectWithData:jsonPage
                                                 options:NSJSONReadingMutableContainers
@@ -105,7 +105,7 @@
             }
         }
         
-        NSData *housesData = [NSKeyedArchiver archivedDataWithRootObject:self.houses];
+        NSData *housesData = [NSKeyedArchiver archivedDataWithRootObject:houseList];
         NSData *eventData = [NSKeyedArchiver archivedDataWithRootObject:self.events];
         [defaults setObject:eventData forKey:@"eventsArray"];
         [defaults setObject:housesData forKey:@"houseArray"];
@@ -147,7 +147,7 @@
     self.events = eventList;
     
     
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ucb-ifc.herokuapp.com/home.json"]]
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://mfast.herokuapp.com/greek"]]
                                                          options:NSJSONReadingMutableContainers
                                                            error:nil];
     

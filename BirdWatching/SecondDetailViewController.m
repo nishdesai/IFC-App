@@ -49,6 +49,9 @@
         self.view.backgroundColor = [UIColor cloudsColor];
         self.rushChairName.text = h.rushChairName;
         self.rushChairNumber.text = h.rushChairPhoneNumber;
+        NSString *rushChairS = [h.rushChairName stringByAppendingString:@" "];
+        rushChairS = [rushChairS stringByAppendingString:h.rushChairPhoneNumber];
+        self.rushChair.text = rushChairS;
         
     }
 }
