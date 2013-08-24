@@ -42,6 +42,7 @@
     
     if (e) {
         self.eventNameLabel.text = e.eventName;
+        self.view.backgroundColor = [UIColor cloudsColor];
         [self.eventHouseButton setTitle:e.house.name forState:UIControlStateNormal];
         self.eventDescriptionLabel.text = e.description;
         self.eventDateLabel.text = [formatter stringFromDate:e.date];
@@ -64,6 +65,26 @@
     if (notificationExists) {
         [self.reminderButton setTitle:@"Remove Reminder" forState:UIControlStateNormal];
     }
+    self.eventNameLabel.font = [UIFont systemFontOfSize:30];
+    
+    self.eventHouseButton.buttonColor = [UIColor tangerineColor];
+    self.eventHouseButton.shadowColor = [UIColor wetAsphaltColor];
+    self.eventHouseButton.shadowHeight = 3.0f;
+    self.eventHouseButton.cornerRadius = 6.0f;
+    self.eventHouseButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    [self.eventHouseButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.eventHouseButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    self.reminderButton.buttonColor = [UIColor tangerineColor];
+    self.reminderButton.shadowColor = [UIColor wetAsphaltColor];
+    self.reminderButton.shadowHeight = 3.0f;
+    self.reminderButton.cornerRadius = 6.0f;
+    self.reminderButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    [self.reminderButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.reminderButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    self.eventDescriptionLabel.numberOfLines = 0;
+    [self.eventDescriptionLabel sizeToFit];
     
 }
 

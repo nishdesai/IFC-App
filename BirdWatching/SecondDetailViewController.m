@@ -62,6 +62,14 @@
     self.navigationItem.title = self.house.greek;
     self.houseNameLabel.font = [UIFont systemFontOfSize:30];
     
+    
+    self.houseBioLabel.numberOfLines = 0;
+    [self.houseBioLabel sizeToFit];
+    
+    self.houseAddressLabel.numberOfLines = 0;
+    [self.houseAddressLabel sizeToFit];
+    
+    
     // Style mapButton
     self.mapButton.buttonColor = [UIColor tangerineColor];
     self.mapButton.shadowColor = [UIColor wetAsphaltColor];
