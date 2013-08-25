@@ -251,6 +251,15 @@
                                     <segue destination="ViO-IE-k4s" kind="push" identifier="EventInfoSegue" id="Imj-cS-LOG"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ErrorCell" id="Ked-DL-bjn">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -502,51 +511,6 @@
             <point key="canvasLocation" x="1870" y="55"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BirdDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="reminderButtonPress:"/>
-                <relationship kind="outlet" name="eventDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventHouseButton" candidateClass="FUIButton"/>
-                <relationship kind="outlet" name="eventNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="reminderButton" candidateClass="FUIButton"/>
-            </relationships>
-        </class>
-        <class className="BirdMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdMasterViewController.h"/>
-        </class>
-        <class className="FUIButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FUIButton.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SecondDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="eventsButton" candidateClass="FUIButton"/>
-                <relationship kind="outlet" name="houseAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="houseBioLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="houseGreekLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="houseNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapButton" candidateClass="FUIButton"/>
-                <relationship kind="outlet" name="rushChair" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="rushChairName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="rushChairNumber" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SecondMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondMasterViewController.h"/>
-        </class>
-        <class className="StreetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StreetViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

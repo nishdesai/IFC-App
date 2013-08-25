@@ -109,34 +109,43 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSInteger total = 1;
-    for (NSInteger i = 0; i < section; i++) {
-        total = total + [self tableView:tableView numberOfRowsInSection:i];
+    if ([self.dataController.events count] > 0) {
+        NSInteger total = 1;
+        for (NSInteger i = 0; i < section; i++) {
+            total = total + [self tableView:tableView numberOfRowsInSection:i];
+        }
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"E, dd/MM"];
+        
+        if ([self.dataController objectInEventsAtIndex:total].date == nil || [[self.dataController objectInEventsAtIndex:total].date isEqual:[NSDate date]]) {
+            return @"Today";
+        }
+        return [formatter stringFromDate:[self.dataController objectInEventsAtIndex:total].date];
     }
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"E, dd/MM"];
-    
-    if ([self.dataController objectInEventsAtIndex:total].date == nil || [[self.dataController objectInEventsAtIndex:total].date isEqual:[NSDate date]]) {
-        return @"Today";
-    }
-    return [formatter stringFromDate:[self.dataController objectInEventsAtIndex:total].date];
+    return nil;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"EventCell";
-    
-    
-    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"hh:mm"];
-    
-    Event *eventAtIndex = [self.dataController objectInEventsAtIndex:indexPath.row];
-    [[cell textLabel] setText:eventAtIndex.eventName];
-    [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.house.name]]];
-    return cell;
+    if ([self.dataController.events count] > 0) {
+        static NSString *CellIdentifier = @"EventCell";
+        
+        
+        UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
+        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        [df setDateFormat:@"hh:mm"];
+        
+        Event *eventAtIndex = [self.dataController objectInEventsAtIndex:indexPath.row];
+        [[cell textLabel] setText:eventAtIndex.eventName];
+        [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.house.name]]];
+        return cell;
+    } else {
+        static NSString *CellIdentifier = @"EventCell";
+        UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
+        [[cell textLabel] setText:@"No events available"];
+    }
     
 }
 
