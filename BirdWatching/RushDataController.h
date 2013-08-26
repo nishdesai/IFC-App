@@ -24,9 +24,12 @@
 
 - (House *)objectInHousesAtIndex:(NSUInteger)index;
 - (Event *)objectInEventsAtIndex:(NSUInteger)index;
+- (Event *)objectInEventsAtIndex:(NSUInteger)index inSection:(NSUInteger)section;
 
 - (void)addHousewithHouse:(House *)house;
 - (void)addEventwithEvent:(Event *)event;
+
+- (void)createSections;
 
 - (void)reloadLists;
 

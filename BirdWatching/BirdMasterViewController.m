@@ -103,16 +103,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([self.dataController.eventsForDay count] > 0) {
-        return [(NSNumber *)[self.dataController.eventsForDay objectAtIndex:section] integerValue];
+        return [[self.dataController.eventsForDay objectAtIndex:section] integerValue];
     }
     return [self.dataController countOfEvents];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if ([self.dataController.events count] > 0) {
-        NSInteger total = 1;
+        NSInteger total = 0;
         for (NSInteger i = 0; i < section; i++) {
-            total = total + [self tableView:tableView numberOfRowsInSection:i];
+            total += [self tableView:tableView numberOfRowsInSection:i];
         }
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -136,15 +136,26 @@
         UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateFormat:@"hh:mm"];
+
+        NSInteger x = 0;
+        for (int i = 0; i < indexPath.section; i++) {
+            x += [self tableView:tableView numberOfRowsInSection:i];
+//            NSLog([NSString stringWithFormat:@"%@", self.dataController.eventsForDay[i]]);
+        }
         
-        Event *eventAtIndex = [self.dataController objectInEventsAtIndex:indexPath.row];
+        x += indexPath.row;
+
+        
+        Event *eventAtIndex = [self.dataController objectInEventsAtIndex:x];
         [[cell textLabel] setText:eventAtIndex.eventName];
         [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.house.name]]];
         return cell;
+        
     } else {
         static NSString *CellIdentifier = @"EventCell";
         UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
         [[cell textLabel] setText:@"No events available"];
+        return cell;
     }
     
 }
@@ -186,7 +197,14 @@
     if ([[segue identifier] isEqualToString:@"EventInfoSegue"]) {
         BirdDetailViewController *detailViewController = [segue destinationViewController];
         
-        detailViewController.event = [self.dataController objectInEventsAtIndex:[self.tableView indexPathForSelectedRow].row];
+        NSInteger x = 0;
+        for (int i = 0; i < [self.tableView indexPathForSelectedRow].section; i++) {
+            x += [self tableView:self.tableView numberOfRowsInSection:i];
+        }
+        
+        x += [self.tableView indexPathForSelectedRow].row;
+        
+        detailViewController.event = [self.dataController objectInEventsAtIndex:x];
     }
 }
 

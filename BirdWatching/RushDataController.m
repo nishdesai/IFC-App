@@ -42,7 +42,6 @@
     
     if (data) {
         for (id key in data) {
-            NSLog(@"looping");
             NSMutableArray *houseEvents = [[NSMutableArray alloc] init];
             NSDictionary *subDictionary = [data objectForKey:key];
             NSString *name = [subDictionary objectForKey:@"name"];
@@ -125,20 +124,10 @@
 
 // UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
     
-   NSDate *prevDate;
-   int numOfEvents = 0;
-   for (int i = 0; i < [self.events count]; i++) {
-       if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
-            numOfEvents++;
-        } else {
-            [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
-            numOfEvents = 0;
-            prevDate = ((Event *)[self.events objectAtIndex:i]).date;
-        }
-    }
-    [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
+
     
     self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
+    
 }
 
 
@@ -270,6 +259,19 @@
     return [self.events objectAtIndex:index];
 }
 
+- (Event *)objectInEventsAtIndex:(NSUInteger)index inSection:(NSUInteger)section {
+    NSUInteger x = 0;
+    for (int i = 0; i < section; i++) {
+        x += (NSUInteger)self.eventsForDay[i];
+//        NSLog([NSString stringWithFormat:@"Cell section: %d", x]);
+    }
+    
+    x += index;
+//    NSLog([NSString stringWithFormat:@"Cell index: %d", x]);
+    return [self objectInEventsAtIndex:x];
+    
+}
+
 -(void)addHousewithHouse:(House *)house {
     [self.houses addObject:house];
 }
@@ -277,6 +279,32 @@
 -(void)addEventwithEvent:(Event *)event {
     [self.events addObject:event];
 }
+
+-(void)createSections {
+    Event *prevEvent = [[Event alloc] init];
+    NSInteger numOfEvents = 0;
+    NSMutableArray *eventsForDay = [[NSMutableArray alloc] init];
+    NSLog([NSString stringWithFormat:@"Number of events: %d", [self.events count]]);
+    for (int i = 0; i < [self.events count]; i++) {
+        NSLog([NSString stringWithFormat:@"Iteration: %d", i]);
+        if (prevEvent == nil || [(Event *)[self.events objectAtIndex:i] compareByDate:prevEvent] == 0) {
+            numOfEvents++;
+            prevEvent = (Event *)[self.events objectAtIndex:i];
+
+        } else {
+            [eventsForDay addObject:[NSNumber numberWithInteger:numOfEvents]];
+            numOfEvents = 1;
+            prevEvent = ((Event *)[self.events objectAtIndex:i]);
+        }
+         NSLog([NSString stringWithFormat:@"numOfEvents: %d", numOfEvents]);
+    }
+    [eventsForDay addObject:[NSNumber numberWithInteger:numOfEvents]];
+    self.eventsForDay = eventsForDay;
+    for (int i = 0; i < [eventsForDay count]; i++) {
+        NSLog([NSString stringWithFormat:@"Days in section %d: %@", i, eventsForDay[i]]);
+    }
+}
+
 
 
 @end

@@ -101,6 +101,7 @@
     if ([[segue identifier] isEqualToString:@"HouseEventsSegue"]) {
         BirdMasterViewController *masterViewController = [segue destinationViewController];
         masterViewController.dataController.events = self.house.events;
+        [masterViewController.dataController createSections];
     } else if ([[segue identifier] isEqualToString:@"HouseMapSegue"]){
         MapViewController *mapView = [segue destinationViewController];
         mapView.house = self.house;
