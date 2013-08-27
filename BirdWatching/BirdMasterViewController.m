@@ -148,7 +148,7 @@
         
         Event *eventAtIndex = [self.dataController objectInEventsAtIndex:x];
         [[cell textLabel] setText:eventAtIndex.eventName];
-        [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.house.name]]];
+        [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.houseName]]];
         return cell;
         
     } else {

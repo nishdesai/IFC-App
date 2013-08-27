@@ -109,15 +109,19 @@
         [defaults setObject:eventData forKey:@"eventsArray"];
         [defaults setObject:housesData forKey:@"houseArray"];
         [defaults synchronize];
+        NSLog(@"defaults saved");
         
         if ([self.houses count] == 0) {
             self.houses = houseList;
         }
         
-    } else if ([defaults objectForKey:@"eventsArray"] != nil){
-        self.events = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"eventsArray"]];
     } else {
-        self.events = [NSMutableArray arrayWithObject:[[Event alloc] initWithHouse:nil andName:@"Data Loading Error" andDate:nil andDescription:nil]];
+        NSLog(@"Loading Defaults");
+        self.events = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"eventsArray"]];
+        
+        for (Event *event in self.events) {
+            NSLog(event.eventName);
+        }
     }
 
     
@@ -267,10 +271,8 @@
     Event *prevEvent = [[Event alloc] init];
     NSInteger numOfEvents = 0;
     NSMutableArray *eventsForDay = [[NSMutableArray alloc] init];
-    NSLog([NSString stringWithFormat:@"Number of events: %d", [self.events count]]);
     for (int i = 0; i < [self.events count]; i++) {
-        NSLog([NSString stringWithFormat:@"Iteration: %d", i]);
-        if (prevEvent == nil || [(Event *)[self.events objectAtIndex:i] compareByDate:prevEvent] == 0) {
+                if (prevEvent == nil || [(Event *)[self.events objectAtIndex:i] compareByDate:prevEvent] == 0) {
             numOfEvents++;
             prevEvent = (Event *)[self.events objectAtIndex:i];
 
@@ -279,13 +281,9 @@
             numOfEvents = 1;
             prevEvent = ((Event *)[self.events objectAtIndex:i]);
         }
-         NSLog([NSString stringWithFormat:@"numOfEvents: %d", numOfEvents]);
     }
     [eventsForDay addObject:[NSNumber numberWithInteger:numOfEvents]];
     self.eventsForDay = eventsForDay;
-    for (int i = 0; i < [eventsForDay count]; i++) {
-        NSLog([NSString stringWithFormat:@"Days in section %d: %@", i, eventsForDay[i]]);
-    }
 }
 
 
