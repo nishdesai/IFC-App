@@ -104,16 +104,18 @@
             }
         }
         
-        NSData *housesData = [NSKeyedArchiver archivedDataWithRootObject:houseList];
+        if ([self.houses count] == 0) {
+            self.houses = houseList;
+        }
+        
+        NSData *housesData = [NSKeyedArchiver archivedDataWithRootObject:self.houses];
         NSData *eventData = [NSKeyedArchiver archivedDataWithRootObject:self.events];
         [defaults setObject:eventData forKey:@"eventsArray"];
         [defaults setObject:housesData forKey:@"houseArray"];
         [defaults synchronize];
         NSLog(@"defaults saved");
         
-        if ([self.houses count] == 0) {
-            self.houses = houseList;
-        }
+        
         
     } else {
         NSLog(@"Loading Defaults");
