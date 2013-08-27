@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *rushChairNumber;
 //New Properties
 @property (weak, nonatomic) IBOutlet UILabel *rushChair;
+@property (weak, nonatomic) IBOutlet UILabel *rushChairHeader;
 
 
 @end

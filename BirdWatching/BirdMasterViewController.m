@@ -133,7 +133,7 @@
         static NSString *CellIdentifier = @"EventCell";
         
         
-        UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
+        UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor peterRiverColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateFormat:@"hh:mm"];
 
@@ -149,12 +149,16 @@
         Event *eventAtIndex = [self.dataController objectInEventsAtIndex:x];
         [[cell textLabel] setText:eventAtIndex.eventName];
         [[cell detailTextLabel] setText:[[df stringFromDate:eventAtIndex.date] stringByAppendingString:[@" @ " stringByAppendingString:eventAtIndex.houseName]]];
+        cell.textLabel.font = [UIFont flatFontOfSize:17];
+        cell.detailTextLabel.font = [UIFont flatFontOfSize:11];
         return cell;
         
     } else {
         static NSString *CellIdentifier = @"EventCell";
         UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
         [[cell textLabel] setText:@"No events available"];
+        cell.textLabel.font = [UIFont flatFontOfSize:17];
+        cell.detailTextLabel.font = [UIFont flatFontOfSize:11];
         return cell;
     }
     

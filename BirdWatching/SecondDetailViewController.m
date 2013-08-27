@@ -12,6 +12,7 @@
 #import "House.h"
 #import "Event.h"
 #import "MapViewController.h"
+#import "UIFont+FlatUI.h"
 
 
 @interface SecondDetailViewController ()
@@ -60,31 +61,36 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     self.navigationItem.title = self.house.greek;
-    self.houseNameLabel.font = [UIFont systemFontOfSize:30];
+    self.houseNameLabel.font = [UIFont flatFontOfSize:30];
     
     
     self.houseBioLabel.numberOfLines = 0;
     [self.houseBioLabel sizeToFit];
+    self.houseBioLabel.font = [UIFont flatFontOfSize:16];
+    
+    self.rushChairHeader.font = [UIFont flatFontOfSize:16];
     
     self.houseAddressLabel.numberOfLines = 0;
     [self.houseAddressLabel sizeToFit];
+    self.houseAddressLabel.font = [UIFont flatFontOfSize:14]; 
     
+    self.rushChair.font = [UIFont flatFontOfSize:14];
     
     // Style mapButton
-    self.mapButton.buttonColor = [UIColor tangerineColor];
+    self.mapButton.buttonColor = [UIColor peterRiverColor];
     self.mapButton.shadowColor = [UIColor wetAsphaltColor];
     self.mapButton.shadowHeight = 3.0f;
     self.mapButton.cornerRadius = 6.0f;
-    self.mapButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    self.mapButton.titleLabel.font = [UIFont flatFontOfSize:22];
     [self.mapButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.mapButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
     // Style eventsButton
-    self.eventsButton.buttonColor = [UIColor tangerineColor];
+    self.eventsButton.buttonColor = [UIColor peterRiverColor];
     self.eventsButton.shadowColor = [UIColor wetAsphaltColor];
     self.eventsButton.shadowHeight = 3.0f;
     self.eventsButton.cornerRadius = 6.0f;
-    self.eventsButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    self.eventsButton.titleLabel.font = [UIFont flatFontOfSize:22];
     [self.eventsButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.eventsButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
 }

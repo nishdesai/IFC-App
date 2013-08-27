@@ -10,6 +10,7 @@
 #import "SecondDetailViewController.h"
 #import "Event.h"
 #import "House.h"
+#import "UIFont+FlatUI.h"
 
 @interface BirdDetailViewController ()
 - (void)configureView;
@@ -65,9 +66,16 @@
     if (notificationExists) {
         [self.reminderButton setTitle:@"Remove Reminder" forState:UIControlStateNormal];
     }
-    self.eventNameLabel.font = [UIFont systemFontOfSize:30];
+    self.eventNameLabel.font = [UIFont flatFontOfSize:30];
+    self.eventDescriptionLabel.font = [UIFont flatFontOfSize:16];
+    self.eventDescriptionLabel.numberOfLines = 0;
+
+
+    self.eventDateLabel.font = [UIFont flatFontOfSize:16];
+
+    //[self.eventDescriptionLabel setCenter:self.view.center];
     
-    self.eventHouseButton.buttonColor = [UIColor tangerineColor];
+    self.eventHouseButton.buttonColor = [UIColor peterRiverColor];
     self.eventHouseButton.shadowColor = [UIColor wetAsphaltColor];
     self.eventHouseButton.shadowHeight = 3.0f;
     self.eventHouseButton.cornerRadius = 6.0f;
@@ -75,16 +83,13 @@
     [self.eventHouseButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.eventHouseButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
-    self.reminderButton.buttonColor = [UIColor tangerineColor];
+    self.reminderButton.buttonColor = [UIColor peterRiverColor];
     self.reminderButton.shadowColor = [UIColor wetAsphaltColor];
     self.reminderButton.shadowHeight = 3.0f;
     self.reminderButton.cornerRadius = 6.0f;
     self.reminderButton.titleLabel.font = [UIFont systemFontOfSize:22];
     [self.reminderButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.reminderButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
-    
-    self.eventDescriptionLabel.numberOfLines = 0;
-    [self.eventDescriptionLabel sizeToFit];
     
 }
 

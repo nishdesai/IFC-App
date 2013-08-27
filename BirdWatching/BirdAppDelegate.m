@@ -9,6 +9,7 @@
 #import "BirdAppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "UITabBar+FlatUI.h"
+#import "UIColor+FlatUI.h"
 
 @implementation BirdAppDelegate
 
@@ -19,9 +20,12 @@
 //    return YES;
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    [tabBarController.tabBar configureFlatTabBarWithColor:[UIColor grayColor] selectedColor:[UIColor blackColor]];
-    
-    
+    [tabBarController.tabBar configureFlatTabBarWithColor:[UIColor midnightBlueColor] selectedColor:[UIColor peterRiverColor]];
+    UITabBarItem *tabBarItem1 = [tabBarController.tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBarController.tabBar.items objectAtIndex:1];
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"calendar.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"calendar.png"]];
+    return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

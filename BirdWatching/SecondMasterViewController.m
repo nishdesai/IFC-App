@@ -88,7 +88,7 @@
         formatter = [[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
-    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
+    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor peterRiverColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
     
     House *houseAtIndex = [self.dataController objectInHousesAtIndex:indexPath.row];
     [[cell textLabel] setText:houseAtIndex.name];
@@ -98,7 +98,8 @@
         [[cell detailTextLabel] setText:@""];
     }
     cell.showsReorderControl = YES;
-    cell.textLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:12];
+    cell.textLabel.font = [UIFont flatFontOfSize:17];
+    cell.detailTextLabel.font = [UIFont flatFontOfSize:17];
     return cell;
 }
 
