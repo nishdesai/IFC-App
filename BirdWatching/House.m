@@ -56,7 +56,7 @@
     [coder encodeObject:self.latitude forKey:@"latutude"];
     [coder encodeObject:self.longitude forKey:@"longitude"];
     [coder encodeInt:self.cameraHeading forKey:@"heading"];
-    [coder encodeObject:self.rushChairName forKey:@"ruchChairName"];
+    [coder encodeObject:self.rushChairName forKey:@"rushChairName"];
     [coder encodeObject:self.rushChairPhoneNumber forKey:@"rushChairNumber"];
 }
 

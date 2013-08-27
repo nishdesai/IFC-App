@@ -49,7 +49,7 @@
             NSString *address = [subDictionary objectForKey:@"address"];
             NSNumber *latitude = [subDictionary objectForKey:@"latitude"];
             NSNumber *longitude = [subDictionary objectForKey:@"longitude"];
-            NSInteger cameraHeading = [subDictionary objectForKey:@"heading"];
+            NSInteger cameraHeading = (NSInteger)[subDictionary objectForKey:@"heading"];
             NSString *rushChairName = [subDictionary objectForKey:@"rushchair_name"];
             NSString *rushChairNumber = [subDictionary objectForKey:@"rushchair_phone_number"];
             House *house = [[House alloc] initWithName:name
@@ -60,6 +60,8 @@
             house.cameraHeading = cameraHeading;
             house.rushChairName = rushChairName;
             house.rushChairPhoneNumber = rushChairNumber;
+            NSLog(house.rushChairName);
+            NSLog(house.rushChairPhoneNumber);
             
             NSArray *calendar = [subDictionary objectForKey:@"calendar"];
             
@@ -125,7 +127,6 @@
             for (Event *event in self.events) {
                 if ([house.name isEqualToString:event.houseName]) {
                     event.house = house;
-                    NSLog(event.house.name);
                 }
             }
         }
@@ -155,7 +156,7 @@
             NSString *address = @"address placeholder";
             NSNumber *latitude = [subDictionary objectForKey:@"latitude"];
             NSNumber *longitude = [subDictionary objectForKey:@"longitude"];
-            NSInteger cameraHeading = [subDictionary objectForKey:@"heading"];
+            NSInteger cameraHeading = (NSInteger)[subDictionary objectForKey:@"heading"];
             NSString *rushChairName = [subDictionary objectForKey:@"rushchair_name"];
             NSString *rushChairNumber = [subDictionary objectForKey:@"rushchair_phone_number"];
             

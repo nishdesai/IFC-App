@@ -8,6 +8,7 @@
 
 #import "BirdAppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "UITabBar+FlatUI.h"
 
 @implementation BirdAppDelegate
 
@@ -15,7 +16,12 @@
 {
     [GMSServices provideAPIKey:@"AIzaSyC55h6Uwfpfdi-LNDqeCFsqVf_npiTkJkw"];
     // Override point for customization after application launch.
-    return YES;
+//    return YES;
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    [tabBarController.tabBar configureFlatTabBarWithColor:[UIColor grayColor] selectedColor:[UIColor blackColor]];
+    
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
