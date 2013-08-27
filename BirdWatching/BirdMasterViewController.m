@@ -133,7 +133,7 @@
         static NSString *CellIdentifier = @"EventCell";
         
         
-        UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor peterRiverColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
+        UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor cloudsColor] selectedColor:[UIColor peterRiverColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateFormat:@"hh:mm"];
 

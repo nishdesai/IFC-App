@@ -88,7 +88,7 @@
         formatter = [[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
-    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor peterRiverColor] selectedColor:[UIColor cloudsColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
+    UITableViewCell *cell = [UITableViewCell configureFlatCellWithColor:[UIColor cloudsColor] selectedColor:[UIColor peterRiverColor] reuseIdentifier:CellIdentifier inTableView:(UITableView *)tableView];
     
     House *houseAtIndex = [self.dataController objectInHousesAtIndex:indexPath.row];
     [[cell textLabel] setText:houseAtIndex.name];
