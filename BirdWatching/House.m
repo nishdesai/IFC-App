@@ -79,4 +79,21 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    House *newHouse = [[[self class] allocWithZone:zone] init];
+    if(newHouse) {
+        [newHouse setName:[self name]];
+        [newHouse setAddress:[self address]];
+        [newHouse setBio:[self bio]];
+        [newHouse setGreek:[self greek]];
+        [newHouse setEvents:[self events]];
+        [newHouse setLatitude:[self latitude]];
+        [newHouse setLongitude:[self longitude]];
+        [newHouse setCameraHeading:[self cameraHeading]];
+        [newHouse setRushChairName:[self rushChairName]];
+        [newHouse setRushChairPhoneNumber:[self rushChairPhoneNumber]];
+    }
+    return newHouse;
+}
+
 @end

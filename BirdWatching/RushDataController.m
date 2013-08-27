@@ -119,8 +119,13 @@
         NSLog(@"Loading Defaults");
         self.events = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"eventsArray"]];
         
-        for (Event *event in self.events) {
-            NSLog(event.eventName);
+        for (House *house in self.houses) {
+            for (Event *event in self.events) {
+                if ([house.name isEqualToString:event.houseName]) {
+                    event.house = house;
+                    NSLog(event.house.name);
+                }
+            }
         }
     }
 

@@ -24,5 +24,6 @@
 -(id)initWithName:(NSString *)name andBio:(NSString *)bio andAddress:(NSString *)address;
 - (void)encodeWithCoder:(NSCoder *)coder;
 - (id)initWithCoder:(NSCoder *)coder;
+- (id)copyWithZone:(NSZone *)zone;
 
 @end

@@ -527,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				Architectures = armv7;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nishant Desai (RKE38GQX2Y)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -535,6 +536,7 @@
 				GCC_PREFIX_HEADER = "BirdWatching/BirdWatching-Prefix.pch";
 				INFOPLIST_FILE = "BirdWatching/BirdWatching-Info.plist";
 				PRODUCT_NAME = RushWeek;
+				PROVISIONING_PROFILE = "B122384A-3E6F-44C3-9A3B-EA245045CD03";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -544,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				Architectures = armv7;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nishant Desai (AGFW489PRC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -552,6 +555,7 @@
 				GCC_PREFIX_HEADER = "BirdWatching/BirdWatching-Prefix.pch";
 				INFOPLIST_FILE = "BirdWatching/BirdWatching-Info.plist";
 				PRODUCT_NAME = RushWeek;
+				PROVISIONING_PROFILE = "049AFD71-FAA6-4174-A4D8-DF30A747A1B4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
