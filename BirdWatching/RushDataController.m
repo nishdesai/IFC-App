@@ -122,12 +122,7 @@
 
     
 
-// UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
-    
-
-    
-    self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
-    
+    [self createSections];
 }
 
 
@@ -202,22 +197,7 @@
         [defaults synchronize];
     }
     
-    // UNCOMMENT THE FOLLOWING BLOCK WHEN DATE FORMAT IS FIXED;
-    
-       NSDate *prevDate;
-       int numOfEvents = 0;
-       for (int i = 0; i < [self.events count]; i++) {
-           if (prevDate == nil || [((Event *)[self.events objectAtIndex:i]).date isEqual:prevDate]) {
-                numOfEvents++;
-            } else {
-                [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
-                numOfEvents = 0;
-                prevDate = ((Event *)[self.events objectAtIndex:i]).date;
-            }
-        }
-        [self.eventsForDay addObject:[NSNumber numberWithInt:numOfEvents]];
-    
-    self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
+    [self createSections];
 
 }
 
@@ -281,6 +261,9 @@
 }
 
 -(void)createSections {
+    
+    self.events = (NSMutableArray *)[self.events sortedArrayUsingSelector:@selector(compareByDate:)];
+    
     Event *prevEvent = [[Event alloc] init];
     NSInteger numOfEvents = 0;
     NSMutableArray *eventsForDay = [[NSMutableArray alloc] init];
