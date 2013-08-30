@@ -60,8 +60,10 @@
             house.cameraHeading = cameraHeading;
             house.rushChairName = rushChairName;
             house.rushChairPhoneNumber = rushChairNumber;
-            NSLog(house.rushChairName);
-            NSLog(house.rushChairPhoneNumber);
+            if ([house.name isEqualToString:@"Sigma Chi"]){
+                NSLog(house.latitude);
+                NSLog(house.longitude);
+            }
             
             NSArray *calendar = [subDictionary objectForKey:@"calendar"];
             
@@ -72,9 +74,14 @@
                 
                 NSDateFormatter *df = [[NSDateFormatter alloc] init];
                 //Change JSON event date/times to this format.
-                [df setDateFormat:@"dd/MM/yyyy hh:mm"];
+                [df setDateFormat:@"dd/MM/yyyy hh:mm a"];
                 NSString *dateString = [houseEvent objectForKey:@"time"];
                 NSDate *eventDate = [df dateFromString:dateString];
+                
+                if (eventDate == nil) {
+                    [df setDateFormat:@"dd/MM/yyyy hh:mm"];
+                    eventDate = [df dateFromString:dateString];
+                }
                 
                 Event *event = [[Event alloc] initWithHouse:house
                                                     andName: eventName
