@@ -26,7 +26,7 @@
     double lon = [self.house.longitude doubleValue];
     
     [panoView_ moveNearCoordinate:CLLocationCoordinate2DMake(lat, lon)];
-    panoView_.camera = [GMSPanoramaCamera cameraWithHeading:65
+    panoView_.camera = [GMSPanoramaCamera cameraWithHeading:(int)self.house.cameraHeading
                                                       pitch:0
                                                        zoom:1];
 }
@@ -44,7 +44,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.navigationItem.title = [self.house.greek stringByAppendingString:@" Street View"];
+    
+    if (self.house.greek) {
+        self.navigationItem.title = [self.house.greek stringByAppendingString:@" Street View"];
+    } else {
+        self.navigationItem.title = [self.house.name stringByAppendingString:@" Street View"];
+    }
 }
 
 - (void)didReceiveMemoryWarning

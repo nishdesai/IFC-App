@@ -60,7 +60,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
-    self.navigationItem.title = self.house.greek;
+    if (self.house.greek) {
+        self.navigationItem.title = self.house.greek;
+    } else {
+        self.navigationItem.title = self.house.name;
+    }
     self.houseNameLabel.font = [UIFont flatFontOfSize:30];
     
     

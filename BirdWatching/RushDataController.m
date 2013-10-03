@@ -28,7 +28,6 @@
     if (temp == nil) {
         NSLog(@"temp is nil");
     } else {
-        NSLog([NSString stringWithFormat:@"%d", [houseArray count]]);
         self.houses = houseArray;
     }
     
@@ -60,10 +59,7 @@
             house.cameraHeading = cameraHeading;
             house.rushChairName = rushChairName;
             house.rushChairPhoneNumber = rushChairNumber;
-            if ([house.name isEqualToString:@"Sigma Chi"]){
-                NSLog(house.latitude);
-                NSLog(house.longitude);
-            }
+            
             
             NSArray *calendar = [subDictionary objectForKey:@"calendar"];
             

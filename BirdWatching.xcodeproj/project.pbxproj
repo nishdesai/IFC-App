@@ -392,6 +392,11 @@
 				CLASSPREFIX = Bird;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Self;
+				TargetAttributes = {
+					198D827C17B0116B00535AFB = {
+						DevelopmentTeam = AGFW489PRC;
+					};
+				};
 			};
 			buildConfigurationList = 198D827817B0116B00535AFB /* Build configuration list for PBXProject "BirdWatching" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -576,6 +581,7 @@
 			buildSettings = {
 				Architectures = armv7;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nishant Desai (RKE38GQX2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -584,7 +590,7 @@
 				GCC_PREFIX_HEADER = "BirdWatching/BirdWatching-Prefix.pch";
 				INFOPLIST_FILE = "BirdWatching/BirdWatching-Info.plist";
 				PRODUCT_NAME = RushWeek;
-				PROVISIONING_PROFILE = "629A1A7E-23D1-4397-A407-E395AB445B77";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -594,7 +600,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				Architectures = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Nishant Desai (AGFW489PRC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer/Users/Nishant/Downloads/ios_distribution.cer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nishant Desai (AGFW489PRC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -603,7 +610,7 @@
 				GCC_PREFIX_HEADER = "BirdWatching/BirdWatching-Prefix.pch";
 				INFOPLIST_FILE = "BirdWatching/BirdWatching-Info.plist";
 				PRODUCT_NAME = RushWeek;
-				PROVISIONING_PROFILE = "F9DC160A-C3EA-4592-8A70-735DD79098B5";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

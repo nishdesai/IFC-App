@@ -55,7 +55,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.navigationItem.title = [self.house.greek stringByAppendingString:@" Map"];
+    if (self.navigationItem.title) {
+        self.navigationItem.title = [self.house.greek stringByAppendingString:@" Map"];
+    } else {
+        self.navigationItem.title = [self.house.name stringByAppendingString:@" Map"];
+    }
 }
 
 - (void)didReceiveMemoryWarning

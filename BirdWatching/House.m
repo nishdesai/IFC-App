@@ -53,7 +53,7 @@
     [coder encodeObject:self.bio forKey:@"bio"];
     [coder encodeObject:self.greek forKey:@"greek"];
     [coder encodeObject:self.events forKey:@"events"];
-    [coder encodeObject:self.latitude forKey:@"latutude"];
+    [coder encodeObject:self.latitude forKey:@"latitude"];
     [coder encodeObject:self.longitude forKey:@"longitude"];
     [coder encodeInt:self.cameraHeading forKey:@"heading"];
     [coder encodeObject:self.rushChairName forKey:@"rushChairName"];
