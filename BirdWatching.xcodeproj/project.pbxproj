@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197A7B7317FEB7B60097C255 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 197A7B7217FEB7B60097C255 /* AppIcon57x57.png */; };
+		197A7B7517FEB7C80097C255 /* AppIcon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 197A7B7417FEB7C70097C255 /* AppIcon114x114.png */; };
 		198D828117B0116B00535AFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198D828017B0116B00535AFB /* UIKit.framework */; };
 		198D828317B0116B00535AFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198D828217B0116B00535AFB /* Foundation.framework */; };
 		198D828517B0116B00535AFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198D828417B0116B00535AFB /* CoreGraphics.framework */; };
 		198D828B17B0116B00535AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 198D828917B0116B00535AFB /* InfoPlist.strings */; };
 		198D828D17B0116B00535AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D828C17B0116B00535AFB /* main.m */; };
 		198D829117B0116B00535AFB /* BirdAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D829017B0116B00535AFB /* BirdAppDelegate.m */; };
-		198D829317B0116B00535AFB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 198D829217B0116B00535AFB /* Default.png */; };
-		198D829517B0116B00535AFB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 198D829417B0116B00535AFB /* Default@2x.png */; };
-		198D829717B0116B00535AFB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 198D829617B0116B00535AFB /* Default-568h@2x.png */; };
 		198D829A17B0116B00535AFB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198D829817B0116B00535AFB /* MainStoryboard.storyboard */; };
 		198D829D17B0116B00535AFB /* BirdMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D829C17B0116B00535AFB /* BirdMasterViewController.m */; };
 		198D82A017B0116B00535AFB /* BirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D829F17B0116B00535AFB /* BirdDetailViewController.m */; };
@@ -24,8 +23,6 @@
 		198D82AE17B0224900535AFB /* SecondMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D82AD17B0224800535AFB /* SecondMasterViewController.m */; };
 		198D82B117B022E300535AFB /* SecondDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D82B017B022E300535AFB /* SecondDetailViewController.m */; };
 		198D82B417B0388F00535AFB /* RushDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198D82B317B0388F00535AFB /* RushDataController.m */; };
-		FD08CA1317C5E1B300BE5F23 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD08CA1217C5E1B300BE5F23 /* Icon.png */; };
-		FD08CA1517C5E1BE00BE5F23 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */; };
 		FD933E5D17C5E81300C0F627 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD933E5C17C5E81300C0F627 /* AVFoundation.framework */; };
 		FD933E5F17C5E83900C0F627 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD933E5E17C5E83900C0F627 /* CoreData.framework */; };
 		FD933E6117C5E84700C0F627 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD933E6017C5E84700C0F627 /* CoreLocation.framework */; };
@@ -40,16 +37,11 @@
 		FD933E7317C5E8EA00C0F627 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD933E7217C5E8EA00C0F627 /* SystemConfiguration.framework */; };
 		FD933E7517C5EACA00C0F627 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD933E7417C5EACA00C0F627 /* GoogleMaps.framework */; };
 		FD933E7717C5EB0800C0F627 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD933E7617C5EB0800C0F627 /* GoogleMaps.bundle */; };
-		FD933E7D17C67B3F00C0F627 /* LaunchImage-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E7A17C67B3F00C0F627 /* LaunchImage-568h.png */; };
-		FD933E7E17C67B3F00C0F627 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E7B17C67B3F00C0F627 /* LaunchImage.png */; };
-		FD933E7F17C67B3F00C0F627 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E7C17C67B3F00C0F627 /* LaunchImage@2x.png */; };
 		FD933E8117C67B7E00C0F627 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E8017C67B7E00C0F627 /* Default.png */; };
 		FD933E8317C67BBC00C0F627 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */; };
 		FD933E8517C67BDA00C0F627 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E8417C67BDA00C0F627 /* Default@2x.png */; };
 		FD933E9317C6B8D500C0F627 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD933E9217C6B8D500C0F627 /* MapViewController.m */; };
 		FD933E9917C6D40A00C0F627 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD933E9817C6D40A00C0F627 /* StreetViewController.m */; };
-		FD933E9B17C7CC4100C0F627 /* view_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E9A17C7CC4100C0F627 /* view_background.png */; };
-		FD933E9D17C7CEE000C0F627 /* wooden_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FD933E9C17C7CEE000C0F627 /* wooden_background.png */; };
 		FD933EC317C7E20000C0F627 /* FUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD933EA017C7E1F500C0F627 /* FUIAlertView.m */; };
 		FD933EC417C7E20000C0F627 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD933EA217C7E1F500C0F627 /* FUIButton.m */; };
 		FD933EC517C7E20000C0F627 /* FUICellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD933EA417C7E1F600C0F627 /* FUICellBackgroundView.m */; };
@@ -84,6 +76,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		197A7B7217FEB7B60097C255 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		197A7B7417FEB7C70097C255 /* AppIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon114x114.png; sourceTree = "<group>"; };
 		198D827D17B0116B00535AFB /* RushWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198D828017B0116B00535AFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		198D828217B0116B00535AFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,9 +88,6 @@
 		198D828E17B0116B00535AFB /* BirdWatching-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BirdWatching-Prefix.pch"; sourceTree = "<group>"; };
 		198D828F17B0116B00535AFB /* BirdAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdAppDelegate.h; sourceTree = "<group>"; };
 		198D829017B0116B00535AFB /* BirdAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdAppDelegate.m; sourceTree = "<group>"; };
-		198D829217B0116B00535AFB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		198D829417B0116B00535AFB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		198D829617B0116B00535AFB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		198D829917B0116B00535AFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		198D829B17B0116B00535AFB /* BirdMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdMasterViewController.h; sourceTree = "<group>"; };
 		198D829C17B0116B00535AFB /* BirdMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdMasterViewController.m; sourceTree = "<group>"; };
@@ -112,8 +103,6 @@
 		198D82B017B022E300535AFB /* SecondDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDetailViewController.m; sourceTree = "<group>"; };
 		198D82B217B0388F00535AFB /* RushDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushDataController.h; sourceTree = "<group>"; };
 		198D82B317B0388F00535AFB /* RushDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushDataController.m; sourceTree = "<group>"; };
-		FD08CA1217C5E1B300BE5F23 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		FD933E5C17C5E81300C0F627 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FD933E5E17C5E83900C0F627 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FD933E6017C5E84700C0F627 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -128,9 +117,6 @@
 		FD933E7217C5E8EA00C0F627 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FD933E7417C5EACA00C0F627 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		FD933E7617C5EB0800C0F627 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		FD933E7A17C67B3F00C0F627 /* LaunchImage-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-568h.png"; path = "../LaunchImage-568h.png"; sourceTree = "<group>"; };
-		FD933E7B17C67B3F00C0F627 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = ../LaunchImage.png; sourceTree = "<group>"; };
-		FD933E7C17C67B3F00C0F627 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage@2x.png"; path = "../LaunchImage@2x.png"; sourceTree = "<group>"; };
 		FD933E8017C67B7E00C0F627 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FD933E8417C67BDA00C0F627 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -138,8 +124,6 @@
 		FD933E9217C6B8D500C0F627 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		FD933E9717C6D40A00C0F627 /* StreetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetViewController.h; sourceTree = "<group>"; };
 		FD933E9817C6D40A00C0F627 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetViewController.m; sourceTree = "<group>"; };
-		FD933E9A17C7CC4100C0F627 /* view_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_background.png; sourceTree = "<group>"; };
-		FD933E9C17C7CEE000C0F627 /* wooden_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wooden_background.png; sourceTree = "<group>"; };
 		FD933E9E17C7E1F400C0F627 /* FlatUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatUIKit.h; sourceTree = "<group>"; };
 		FD933E9F17C7E1F400C0F627 /* FUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIAlertView.h; sourceTree = "<group>"; };
 		FD933EA017C7E1F500C0F627 /* FUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIAlertView.m; sourceTree = "<group>"; };
@@ -222,6 +206,8 @@
 		198D827417B0116B00535AFB = {
 			isa = PBXGroup;
 			children = (
+				197A7B7417FEB7C70097C255 /* AppIcon114x114.png */,
+				197A7B7217FEB7B60097C255 /* AppIcon57x57.png */,
 				FD933E7217C5E8EA00C0F627 /* SystemConfiguration.framework */,
 				FD933E7017C5E8E100C0F627 /* QuartzCore.framework */,
 				FD933E6E17C5E8D800C0F627 /* OpenGLES.framework */,
@@ -311,11 +297,6 @@
 				FD933EC017C7E20000C0F627 /* UITableViewCell+FlatUI.m */,
 				FD933EC117C7E20000C0F627 /* UIToolbar+FlatUI.h */,
 				FD933EC217C7E20000C0F627 /* UIToolbar+FlatUI.m */,
-				FD08CA1417C5E1BE00BE5F23 /* Icon@2x.png */,
-				FD08CA1217C5E1B300BE5F23 /* Icon.png */,
-				FD933E7A17C67B3F00C0F627 /* LaunchImage-568h.png */,
-				FD933E7B17C67B3F00C0F627 /* LaunchImage.png */,
-				FD933E7C17C67B3F00C0F627 /* LaunchImage@2x.png */,
 				FD933E8417C67BDA00C0F627 /* Default@2x.png */,
 				FD933E8217C67BBC00C0F627 /* Default-568h@2x.png */,
 				FD933E8017C67B7E00C0F627 /* Default.png */,
@@ -334,10 +315,8 @@
 				198D82AA17B01EF400535AFB /* Event.m */,
 				198D82B217B0388F00535AFB /* RushDataController.h */,
 				198D82B317B0388F00535AFB /* RushDataController.m */,
-				FD933E9A17C7CC4100C0F627 /* view_background.png */,
 				198D829B17B0116B00535AFB /* BirdMasterViewController.h */,
 				198D829C17B0116B00535AFB /* BirdMasterViewController.m */,
-				FD933E9C17C7CEE000C0F627 /* wooden_background.png */,
 				198D829E17B0116B00535AFB /* BirdDetailViewController.h */,
 				198D829F17B0116B00535AFB /* BirdDetailViewController.m */,
 				198D82AC17B0224800535AFB /* SecondMasterViewController.h */,
@@ -356,9 +335,6 @@
 				198D828917B0116B00535AFB /* InfoPlist.strings */,
 				198D828C17B0116B00535AFB /* main.m */,
 				198D828E17B0116B00535AFB /* BirdWatching-Prefix.pch */,
-				198D829217B0116B00535AFB /* Default.png */,
-				198D829417B0116B00535AFB /* Default@2x.png */,
-				198D829617B0116B00535AFB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -421,21 +397,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				198D828B17B0116B00535AFB /* InfoPlist.strings in Resources */,
-				198D829317B0116B00535AFB /* Default.png in Resources */,
-				198D829517B0116B00535AFB /* Default@2x.png in Resources */,
-				198D829717B0116B00535AFB /* Default-568h@2x.png in Resources */,
 				198D829A17B0116B00535AFB /* MainStoryboard.storyboard in Resources */,
-				FD08CA1317C5E1B300BE5F23 /* Icon.png in Resources */,
-				FD08CA1517C5E1BE00BE5F23 /* Icon@2x.png in Resources */,
 				FD933E7717C5EB0800C0F627 /* GoogleMaps.bundle in Resources */,
-				FD933E7D17C67B3F00C0F627 /* LaunchImage-568h.png in Resources */,
-				FD933E7E17C67B3F00C0F627 /* LaunchImage.png in Resources */,
-				FD933E7F17C67B3F00C0F627 /* LaunchImage@2x.png in Resources */,
 				FD933E8117C67B7E00C0F627 /* Default.png in Resources */,
 				FD933E8317C67BBC00C0F627 /* Default-568h@2x.png in Resources */,
 				FD933E8517C67BDA00C0F627 /* Default@2x.png in Resources */,
-				FD933E9B17C7CC4100C0F627 /* view_background.png in Resources */,
-				FD933E9D17C7CEE000C0F627 /* wooden_background.png in Resources */,
 				FD933ED817C814A800C0F627 /* Montserrat-Regular.ttf in Resources */,
 				FDD9EB6917CC88E600C35744 /* calendar.png in Resources */,
 				FDD9EB6A17CC88E600C35744 /* home.png in Resources */,
@@ -449,6 +415,8 @@
 				FDD9EB7C17CC8D1300C35744 /* Lato-Light.ttf in Resources */,
 				FDD9EB7D17CC8D1300C35744 /* Lato-LightItalic.ttf in Resources */,
 				FDD9EB7E17CC8D1300C35744 /* Lato-Regular.ttf in Resources */,
+				197A7B7317FEB7B60097C255 /* AppIcon57x57.png in Resources */,
+				197A7B7517FEB7C80097C255 /* AppIcon114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

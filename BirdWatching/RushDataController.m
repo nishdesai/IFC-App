@@ -181,7 +181,7 @@
                 NSString *eventDescription = [houseEvent objectForKey:@"description"];
                 
                 NSDateFormatter *df = [[NSDateFormatter alloc] init];
-                //Change JSON event date/times to this format.
+                
                 [df setDateFormat:@"dd/MM/yyyy hh:mm a"];
                 NSString *dateString = [houseEvent objectForKey:@"time"];
                 NSDate *eventDate = [df dateFromString:dateString];

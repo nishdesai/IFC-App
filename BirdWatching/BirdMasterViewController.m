@@ -30,6 +30,7 @@
 @interface BirdMasterViewController ()
 
 @property NSDate *lastRefresh;
+-(void) refreshView:(UIRefreshControl *)sender;
 
 @end
 
@@ -58,11 +59,20 @@
                                    whenContainedIn:[UINavigationBar class], nil];
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
+    [self.refreshControl addTarget:self
+                            action:@selector(refreshView:)
+                  forControlEvents:UIControlEventValueChanged];
+    
 //	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = nil;
 //
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)refreshView:(UIRefreshControl *)sender {
+    [self.dataController reloadLists];
+    [sender endRefreshing];
 }
 
 
