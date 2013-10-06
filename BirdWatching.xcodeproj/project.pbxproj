@@ -558,7 +558,7 @@
 				GCC_PREFIX_HEADER = "BirdWatching/BirdWatching-Prefix.pch";
 				INFOPLIST_FILE = "BirdWatching/BirdWatching-Info.plist";
 				PRODUCT_NAME = RushWeek;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "EC691CF6-0FF8-4E28-93C7-18E73AA36DE9";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -568,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				Architectures = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Developer/Users/Nishant/Downloads/ios_distribution.cer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nishant Desai (AGFW489PRC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nishant Desai (AGFW489PRC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -578,7 +578,7 @@
 				GCC_PREFIX_HEADER = "BirdWatching/BirdWatching-Prefix.pch";
 				INFOPLIST_FILE = "BirdWatching/BirdWatching-Info.plist";
 				PRODUCT_NAME = RushWeek;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CB6273CA-C95B-4558-B744-973BB821B075";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
